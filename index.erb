@@ -1,0 +1,38 @@
+<head>
+    <link rel="stylesheet" href="main.css">
+    <link rel="shortcut icon" href="/favicon.ico?v2" />
+    <title>Tristan Rice - fn.lc</title>
+</head>
+<body>
+    <section id="head">
+        <div id="top">
+        </div>
+        <div id="center">
+            <div class="circle">
+                <img class="animate-circle" src="img/d4l3k.jpg">
+            </div>
+        </div>
+    </section>
+        <% require 'nokogiri'
+        html = Nokogiri.HTML(File.read('public/code.js.html'))
+        lines = html.css("#vimCodeElement").to_html.split("\n")
+        b_data = {
+            github: "https://github.com/d4l3k",
+            email: "mailto:rice@outerearth.net",
+            twitter: "https://twitter.com/rice_fry",
+            keybase: "https://keybase.io/rice",
+            Resume: "about:blank",
+            WebSync: "https://websyn.ca",
+            Blog: "http://blog.fn.lc"
+        }
+        lines = lines.map do |line|
+            b_data.each do |s, url|
+                if line.include? s.to_s
+                     line = "<a href='#{url}'>#{line}</a>"
+                end
+            end
+            line
+        end
+        %>
+        <%= lines.join("\n") %>
+</body>

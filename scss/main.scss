@@ -1,0 +1,143 @@
+@mixin keyframes($name) {
+    @-moz-keyframes #{$name}{@content;}
+    @-o-keyframes #{$name}{@content;}
+    @-webkit-keyframes #{$name}{@content;}
+    @-ms-keyframes #{$name}{@content;}
+    @keyframes #{$name}{@content;}
+}
+@mixin ex($key, $val...) {
+    -moz-#{$key}: $val;
+    -o-#{$key}: $val;
+    -ms-#{$key}: $val;
+    -webkit-#{$key}: $val;
+    #{$key}: $val;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Open Sans Light', Sans, sans;
+    min-height: 100%;
+    -webkit-font-smoothing: antialiased;
+    -webkit-backface-visibility: hidden;
+
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    @include ex(justify-content, flex-start);
+    @include ex(align-content, flex-start);
+    @include ex(flex-direction, column);
+    & > * {
+        @include ex(flex, 0 0 auto);
+    }
+}
+section {
+    width: 100%;
+}
+$header-size: 170px;
+
+#center {
+    position: absolute;
+    top: $header-size;
+    margin: -107px 0;
+    text-align: center;
+    width: 100%;
+    .circle {
+        border-radius: 100000;
+        background-color: white;
+        width: 200px;
+        margin: 0 auto;
+        padding: 7px;
+        img {
+            width: 100%;
+            border-radius: 10000;
+        }
+    }
+}
+.code {
+    color: black;
+    font-family: monospace;
+    h {
+        color: #888;
+    }
+}
+tab {
+    margin-left: 4em;
+}
+#head {
+    width: 100%;
+    height: $header-size*2;
+}
+#top {
+    background: #1c1c1e url("img/banner.jpg") 50% 50% no-repeat fixed;
+    @include ex(background-size, cover);
+    width: 100%;
+    position: absolute;
+    top: 0;
+    height: $header-size;
+}
+@include keyframes(slide-fade-in) {
+    from   {
+        opacity: 0;
+        @include ex(transform, translate3d(0, 20px, 0));
+    }
+    to  {
+        opacity: 1;
+        @include ex(transform, translate3d(0, 0, 0));
+    }
+}
+.animate {
+    @include ex(animation, slide-fade-in 0.8s ease);
+}
+.animate-circle {
+    @include ex(animation, circle-fade-in 0.8s ease);
+    @include ex(transform-origin, center center);
+}
+@include keyframes(circle-fade-in) {
+    from   {
+        opacity: 0;
+        @include ex(transform, scale(0));
+    }
+    to  {
+        opacity: 1;
+        @include ex(transform, scale(1));
+    }
+}
+
+pre#vimCodeElement {
+    display: inline-block;
+    padding: 10px;
+    text-align: left;
+    font-size: 2em;
+    a {
+        text-decoration: none;
+        color: inherit;
+        &:hover, &:hover * {
+            text-decoration: underline;
+        }
+    }
+    white-space: pre-wrap; font-family: monospace; color: #dddddd; background-color: #000000;
+    * { font-size: 1em; }
+    .Function { color: #00ff00; }
+    .LineNr { color: #ffff00; }
+    .Constant { color: #00ffff; }
+    .Identifier { color: #ff00ff; }
+    .Statement { color: #ffffff; font-weight: bold; }
+}
+@media (max-width: 767px) {
+    pre#vimCodeElement {
+        font-size: 1.5em;
+    }
+}
