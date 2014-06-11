@@ -7,9 +7,3 @@ task :default do
     `mv code.js.html public`
     `erb index.erb > public/index.html`
 end
-begin
-  require 'vlad'
-  Vlad.load
-rescue LoadError
-  # do nothing
-end
