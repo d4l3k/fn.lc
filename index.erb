@@ -17,13 +17,14 @@
         html = Nokogiri.HTML(File.read('public/code.js.html'))
         lines = html.css("#vimCodeElement").to_html.split("\n")
         b_data = {
-            github: "https://github.com/d4l3k",
-            email: "mailto:rice@outerearth.net",
-            twitter: "https://twitter.com/rice_fry",
-            keybase: "https://keybase.io/rice",
-            Resume: "https://websyn.ca/8X/view",
-            WebSync: "https://websyn.ca",
-            Blog: "http://blog.fn.lc"
+            github: 'https://github.com/d4l3k',
+            email: 'mailto:rice@outerearth.net',
+            twitter: 'https://twitter.com/rice_fry',
+            keybase: 'https://keybase.io/rice',
+            Resume: 'https://websyn.ca/8X/view',
+            WebSync: 'https://websyn.ca',
+            Blog: 'http://blog.fn.lc',
+            LibreLint: 'https://github.com/d4l3k/LibreLint'
         }
         lines = lines.map do |line|
             b_data.each do |s, url|

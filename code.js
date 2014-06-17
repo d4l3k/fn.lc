@@ -5,11 +5,12 @@ function look() {
     this.resources = [
         "Blog",
         "Resume"
-    ]
+    ];
     this.keybase  = "rice";
     this.twitter  = "rice_fry";
     this.projects = [
-        "WebSync"
-    ]
+        "WebSync",
+        "LibreLint"
+    ];
 }
 new look();
