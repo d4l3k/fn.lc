@@ -2,8 +2,8 @@ require 'nokogiri'
 require 'pry'
 
 task :default do
-    `sass scss/main.scss public/main.css`
-    `gvim -f -n code.js +TOhtml +wq +q`
-    `mv code.js.html public`
-    `erb index.erb > public/index.html`
+    system "sass scss/main.scss public/main.css"
+    system "gvim -f -n code.js +TOhtml +wq +q"
+    system "mv code.js.html public"
+    system "erb index.erb > public/index.html"
 end

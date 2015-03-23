@@ -53,14 +53,14 @@ section {
   text-align: center;
   width: 100%; }
   #center .circle {
-    border-radius: 100000;
+    border-radius: 100000px;
     background-color: white;
     width: 200px;
     margin: 0 auto;
     padding: 7px; }
     #center .circle img {
       width: 100%;
-      border-radius: 10000; }
+      border-radius: 10000px; }
 
 .code {
   color: black;
