@@ -78,7 +78,7 @@ tab {
 }
 #head {
     width: 100%;
-    height: $header-size*2;
+    height: $header-size*2 - 40px;
 }
 #top {
     background: #1c1c1e url("img/banner.jpg") 50% 50% no-repeat fixed;
@@ -119,6 +119,7 @@ tab {
 pre#vimCodeElement {
     display: inline-block;
     padding: 10px;
+    margin: 10px;
     text-align: left;
     font-size: 2em;
     a {

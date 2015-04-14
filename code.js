@@ -10,6 +10,7 @@ function look() {
     this.twitter  = "rice_fry";
     this.projects = [
         "WebSync",
+        "go-pry",
         "LibreLint",
         Sketchy.shorten(url)
     ];
