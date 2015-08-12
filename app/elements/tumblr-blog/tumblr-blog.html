@@ -1,0 +1,106 @@
+<link rel="import" href="../../bower_components/byutv-jsonp/byutv-jsonp.html">
+<link rel="import" href="../../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../../bower_components/paper-card/paper-card.html">
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<dom-module id="tumblr-blog">
+  <style>
+    :host {
+      display: block;
+    }
+    .url {
+      background-color: #529ecc;
+      color: white;
+      text-decoration: none;
+      display: block;
+      text-align: center;
+      padding: 30px;
+      font-size: 1.2em;
+    }
+    .url:hover {
+      background-image: linear-gradient(rgba(0,0,0,.1),rgba(0,0,0,.1));
+    }
+    .url-container {
+      border-radius: 2px;
+      margin: 0 -5px;
+    }
+    paper-card {
+      width: 700px;
+      margin: 0 auto 40px;
+      display: block;
+    }
+    .quote {
+      border-left: 3px solid #ccc;
+      padding-left: 10px;
+    }
+    .card-actions > a {
+      color: inherit;
+    }
+  </style>
+  <template>
+    <byutv-jsonp
+        auto
+        url="http://api.tumblr.com/v2/blog/blog.fn.lc/posts"
+        handle-as="json"
+        on-response="handlePosts"
+        debounce-duration="300"></byutv-jsonp>
+    <template is="dom-repeat" items="[[posts]]">
+      <template is="dom-if" if="[[!eq(item.type, 'quote')]]">
+        <paper-card heading="[[item.title]]" image="[[postPhoto(item)]]">
+          <template is="dom-if" if="[[item.url]]">
+            <paper-material class="url-container" elevation="1">
+              <a class="card-content url" href="[[item.url]]">[[item.url]]</a>
+            </paper-material>
+          </template>
+          <div class="card-content">
+            <safe-html html="[[item.description]]"></safe-html>
+            <safe-html html="[[item.body]]"></safe-html>
+            <safe-html html="[[item.caption]]"></safe-html>
+          </div>
+          <div class="card-actions">
+            <a href="[[item.post_url]]" title="Post URL">
+              <paper-icon-button icon="link"></paper-icon-button>
+            </a>
+          </div>
+        </paper-card>
+      </template>
+      <template is="dom-if" if="[[eq(item.type, 'quote')]]">
+        <paper-card heading="Reblog">
+          <div class="card-content">
+            <div class="quote">
+              <safe-html html="[[item.text]]"></safe-html>
+            </div>
+            <safe-html html="[[item.source]]"></safe-html>
+          </div>
+        </paper-card>
+      </template>
+    </template>
+  </template>
+  <script>
+  (function() {
+    Polymer({
+      is: 'tumblr-blog',
+
+      properties: {
+        posts: {
+          type: Array,
+        }
+      },
+      handlePosts: function(data) {
+        var resp = data.detail.response;
+        this.posts = resp.posts;
+        this.blog = resp.blog;
+      },
+      postPhoto: function(item) {
+        if (!item.photos) {
+          return;
+        }
+        return item.photos[0].original_size.url;
+      },
+      eq: function(a, b) {
+        return a === b;
+      }
+    });
+  })();
+  </script>
+</dom-module>
