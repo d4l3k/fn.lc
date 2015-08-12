@@ -1,18 +1,19 @@
 function look() {
-    this.owner    = "Tristan Rice";
-    this.email    = "rice@outerearth.net";
-    this.github   = "d4l3k";
-    this.resources = [
-        "Blog",
-        "Resume"
-    ];
-    this.keybase  = "rice";
-    this.twitter  = "rice_fry";
-    this.projects = [
-        "WebSync",
-        "go-pry",
-        "LibreLint",
-        Sketchy.shorten(url)
-    ];
+  this.owner    = "Tristan Rice";
+  this.email    = "rice@fn.lc";
+  this.github   = "d4l3k";
+  this.resources = [
+    "Blog",
+    "Resume"
+  ];
+  this.projects = [
+    "WebSync",
+    "go-pry",
+    "LibreLint",
+    Sketchy.shorten(url)
+  ];
+  this.keybase  = "rice";
+  this.linkedin = "d4l3k";
+  this.twitter  = "rice_fry";
 }
 new look();
