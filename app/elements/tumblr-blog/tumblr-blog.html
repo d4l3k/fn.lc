@@ -115,7 +115,8 @@
         if (!item.photos) {
           return;
         }
-        return item.photos[0]['original_size'].url;
+        return item.photos[0].original_size.url; // jshint ignore:line
+
       },
       eq: function(a, b) {
         return a === b;

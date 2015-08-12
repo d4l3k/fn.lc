@@ -10,9 +10,9 @@ set :repository, 'https://github.com/d4l3k/fn.lc.git'
 task :deploy do
     deploy do
         invoke :'git:clone'
-        queue 'ls'
         queue 'mkdir -p public/lib'
-        queue 'npm install --python python2'
+        queue 'ls'
+        queue 'npm install --python=/usr/bin/python2'
         queue 'bower install'
         queue 'gulp'
     end
