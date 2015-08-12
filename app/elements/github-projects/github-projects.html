@@ -29,17 +29,31 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     iron-icon {
       margin-top: -4px;
     }
+    .projects {
+      border: 1px solid #e0e0e0;
+      border-radius: 2px;
+      overflow: hidden;
+    }
+    .project {
+      background-color: #fff;
+      line-height: 1.5rem;
+      padding: 10px 20px;
+      margin: 0;
+      border-bottom: 1px solid #e0e0e0;
+    }
   </style>
   <template>
     <paper-card heading="GitHub Projects">
       <div class="card-content">
-        <template is="dom-repeat" items="[[projects]]">
-          <div class="project">
-            <span class="right"><span>[[item.stargazers_count]]</span><iron-icon icon="star"></iron-icon></span>
-            <a class="title" href="[[item.url]]">[[item.name]]</a>
-            <div>[[item.description]]</div>
-          </div>
-        </template>
+        <div class="projects">
+          <template is="dom-repeat" items="[[projects]]">
+            <div class="project">
+              <span class="right"><span>[[item.stargazers_count]]</span><iron-icon icon="star"></iron-icon></span>
+              <a class="title" href="[[item.url]]">[[item.name]]</a>
+              <div>[[item.description]]</div>
+            </div>
+          </template>
+        </div>
       </div>
     </paper-card>
     <iron-ajax

@@ -17,6 +17,11 @@ body {
 code {
   white-space: pre-wrap;
 }
+
+h3 {
+  font-weight: 400;
+}
+
 pre {
   background-color: #111;
   color: white;
@@ -50,4 +55,53 @@ safe-html > p:first-child {
 
 #drawer {
   background-color: rgba(255,255,255,0.8) !important;
+}
+
+a {
+  color: #039be5;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+a:hover {
+  color: #0384C3;
+}
+
+.header.paper-card .title-text.paper-card {
+  font-weight: 200;
+  font-size: 28px;
+  padding-bottom: 0;
+}
+paper-card > paper-material {
+  padding: 14px 0;
+}
+paper-card > paper-material .card-actions {
+  margin-bottom: -14px;
+}
+
+paper-card .card-content, paper-card .card-actions, paper-card .header.paper-card .title-text.paper-card {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+/* Print styles */
+@media print {
+  body {
+    display: initial !important;
+  }
+  #background, #background2, #drawer {
+    display: none;
+  }
+  .content {
+    height: initial !important;
+  }
+  #headerContainer paper-icon-button {
+    display: none;
+  }
+  iron-selector.paper-drawer-panel > #main.paper-drawer-panel, paper-drawer-panel, #mainContainer {
+    position: initial !important;
+  }
+  paper-material {
+    box-shadow: none !important;
+    border: 1px solid #e8e8e8;
+  }
 }
