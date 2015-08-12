@@ -105,3 +105,8 @@ paper-card .card-content, paper-card .card-actions, paper-card .header.paper-car
     border: 1px solid #e8e8e8;
   }
 }
+
+tumblr-blog paper-card .card-content img {
+  display: block;
+  margin: 0 auto;
+}

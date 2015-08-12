@@ -33,8 +33,21 @@
       border-left: 3px solid #ccc;
       padding-left: 10px;
     }
+    .card-actions {
+      height: 40px;
+      line-height: 40px;
+    }
     .card-actions > a {
       color: inherit;
+      float: right;
+      line-height: 0;
+    }
+    paper-card /deep/ .header.paper-card img.paper-card {
+      display: block;
+      margin: 0 auto;
+      width: initial;
+      max-width: 100%;
+      max-height: 640px;
     }
   </style>
   <template>
@@ -58,6 +71,7 @@
             <safe-html html="[[item.caption]]"></safe-html>
           </div>
           <div class="card-actions">
+            <span title="[[item.date]]">[[moment(item.date)]]</span>
             <a href="[[item.post_url]]" title="Post URL">
               <paper-icon-button icon="link"></paper-icon-button>
             </a>
@@ -70,7 +84,13 @@
             <div class="quote">
               <safe-html html="[[item.text]]"></safe-html>
             </div>
-            <safe-html html="[[item.source]]"></safe-html>
+            &mdash; <safe-html html="[[item.source]]"></safe-html>
+          </div>
+          <div class="card-actions">
+            <span title="[[item.date]]">[[moment(item.date)]]</span>
+            <a href="[[item.post_url]]" title="Post URL">
+              <paper-icon-button icon="link"></paper-icon-button>
+            </a>
           </div>
         </paper-card>
       </template>
@@ -95,10 +115,14 @@
         if (!item.photos) {
           return;
         }
-        return item.photos[0]['original_size.url'];
+        return item.photos[0]['original_size'].url;
       },
       eq: function(a, b) {
         return a === b;
+      },
+      moment: function(date) {
+        console.log(date);
+        return moment(date).fromNow();
       }
     });
   })();
