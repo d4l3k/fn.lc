@@ -1,1 +1,0 @@
-﻿WCT.loadSuites(["byutv-jsonp-tests.html"]);
