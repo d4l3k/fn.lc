@@ -67,7 +67,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     document.getElementById('background2'),
   ];
   window.renderBackground = function(first) {
-    var pattern = Trianglify({
+    var pattern = new Trianglify({
         width: window.innerWidth,
         height: window.innerHeight*4,
     });

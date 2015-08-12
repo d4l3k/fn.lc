@@ -61,7 +61,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       },
       loadedProjects: function(e, req) {
         this.projects = req.response.sort(function(a, b) {
-          return b.stargazers_count - a.stargazers_count;
+          return b.stargazers_count - a.stargazers_count; // jshint ignore:line
         }).slice(0,5);
       }
     });
