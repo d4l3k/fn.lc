@@ -11,6 +11,7 @@ task :deploy do
     deploy do
         invoke :'git:clone'
         queue 'ls'
+        queue 'mkdir -p public/lib'
         queue 'npm install --python python2'
         queue 'bower install'
         queue 'gulp'
