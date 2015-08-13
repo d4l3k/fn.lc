@@ -110,6 +110,17 @@
         var resp = data.detail.response;
         this.posts = resp.posts;
         this.blog = resp.blog;
+        setTimeout(function() {
+          var elems = document.querySelectorAll('code');
+          for (var i=0; i < elems.length; i++) {
+            var elem = elems[i];
+            if (!elem.classList.contains('prettyprint')) {
+              elem.classList.add('prettyprint');
+              elem.classList.add('linenums');
+            }
+          }
+          window.prettyPrint();
+        }, 100);
       },
       postPhoto: function(item) {
         if (!item.photos) {
