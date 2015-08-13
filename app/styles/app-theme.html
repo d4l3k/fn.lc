@@ -46,7 +46,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   }
 
   /* General styles */
-  table.contact {
+  div.contact {
     margin-left: 10px;
   }
 
@@ -64,10 +64,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     }
   }
 
-  table.contact td {
-    padding: 5px 10px;
+  div.contact span:first-child {
+    display: inline-block;
+    min-width: 70px;
   }
-
   a > paper-icon-button {
     color: white;
   }
@@ -192,6 +192,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
     .bg {
       background: white;
+    }
+
+    div.contact span:last-child {
+      display: block;
     }
 
   }
