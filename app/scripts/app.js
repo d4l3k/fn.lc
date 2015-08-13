@@ -13,6 +13,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 (function(document) {
   'use strict';
 
+  window.event = window.event || null;
+
   var app = document.querySelector('#app');
 
   app.displayInstalledToast = function() {
