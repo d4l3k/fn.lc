@@ -55,6 +55,7 @@
         auto
         url="https://api.tumblr.com/v2/blog/blog.fn.lc/posts"
         handle-as="json"
+        params="[[tumblrParams]]"
         on-response="handlePosts"
         debounce-duration="300"></byutv-jsonp>
     <template is="dom-repeat" items="[[posts]]">
@@ -72,7 +73,7 @@
           </div>
           <div class="card-actions">
             <span title="[[item.date]]">[[moment(item.date)]]</span>
-            <a href="[[item.post_url]]" title="Post URL">
+            <a on-tap="updatePage"href="[[url(item)]]" title="Post URL">
               <paper-icon-button icon="link"></paper-icon-button>
             </a>
           </div>
@@ -104,8 +105,25 @@
       properties: {
         posts: {
           type: Array,
+        },
+
+        post: {
+          type: String,
+          value: ''
+        },
+
+        tumblrParams: {
+          type: String,
+          computed: 'genTumblrParams(post)'
         }
       },
+
+      genTumblrParams: function(post) {
+        return {
+          id: post
+        };
+      },
+
       handlePosts: function(data) {
         var resp = data.detail.response;
         this.posts = resp.posts;
@@ -122,6 +140,7 @@
           window.prettyPrint();
         }, 100);
       },
+
       postPhoto: function(item) {
         if (!item.photos) {
           return;
@@ -129,11 +148,23 @@
         return item.photos[0].original_size.url; // jshint ignore:line
 
       },
+
       eq: function(a, b) {
         return a === b;
       },
+
       moment: function(date) {
         return window.moment(date).fromNow();
+      },
+
+      url: function(item) {
+        return "#!/blog/" + item.id + "/" + item.slug;
+      },
+
+      updatePage: function() {
+        setTimeout(function() {
+          window.page();
+        }, 1);
       }
     });
   })();
