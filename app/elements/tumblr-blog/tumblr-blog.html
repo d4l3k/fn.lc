@@ -120,7 +120,8 @@
 
       genTumblrParams: function(post) {
         return {
-          id: post
+          id: post,
+          api_key: '7yPKpjkOaFtfGMi7LCROek4FUoBldJhJPyapJe97Rg96C4SS7F',
         };
       },
 
@@ -154,7 +155,8 @@
       },
 
       moment: function(date) {
-        return window.moment(date).fromNow();
+        // Strip GMT
+        return window.moment(date.substring(0, date.length-4)).add(8, 'hours').fromNow();
       },
 
       url: function(item) {
