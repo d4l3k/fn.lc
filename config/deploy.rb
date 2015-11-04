@@ -12,7 +12,7 @@ task :deploy do
         invoke :'git:clone'
         queue 'mkdir -p public/lib'
         queue 'ls'
-        queue 'npm install --python=/usr/bin/python2'
+        queue 'npm install --loglevel error --python=/usr/bin/python2'
         queue 'bower install'
         queue 'gulp'
     end
