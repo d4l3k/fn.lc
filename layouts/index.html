@@ -1,0 +1,51 @@
+{{ partial "header.html" . }}
+
+<section>
+  <amp-img class="circle" height="180" layout="fixed" width="180"
+    src="https://avatars1.githubusercontent.com/u/909104?v=3&s=180"></amp-img>
+  <h2>Hi there!</h2>
+  <p>
+  I'm Tristan Rice; Software Engineer and student at the University of British Columbia.
+  </p>
+  <blockquote>
+    <table>
+      <tr>
+        <td>Email
+        <td><a href="mailto:rice@fn.lc">rice@fn.lc</a>
+      </tr>
+      <tr>
+        <td>GitHub
+        <td><a href="https://github.com">https://github.com</a>
+      </tr>
+      <tr>
+        <td>Resume
+        <td><a href="https://fn.lc/s/resume.pdf">https://fn.lc/s/resume.pdf</a>
+      </tr>
+      <tr>
+        <td>LinkedIn
+        <td><a href="https://linkedin.com/in/d4l3k">https://linkedin.com/in/d4l3k</a>
+      </tr>
+      <tr>
+        <td>Keybase
+        <td><a href="https://keybase.io/rice">https://keybase.io/rice</a>
+      </tr>
+    </table>
+  </blockquote>
+</section>
+
+<section>
+  <h2>Projects</h2>
+</section>
+
+
+<section id="main">
+  <h2>Posts</h2>
+
+  <div>
+    {{ range first 10 .Data.Pages }}
+        {{ .Render "summary"}}
+    {{ end }}
+  </div>
+</section>
+
+{{ partial "footer.html" . }}
