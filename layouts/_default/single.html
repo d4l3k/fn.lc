@@ -3,18 +3,16 @@
 
 <section id="main">
   <h2 id="title"><a href="{{.Permalink}}">{{ .Title }}</a></h2>
-  <div>
-        <article id="content">
-           {{ .Content }}
-        </article>
-  </div>
+  <div class="post-meta">{{ .Date.Format "Mon Jan 2, 2006" }} - {{ .ReadingTime }}
+    Minutes - {{ .FuzzyWordCount }} Words</div>
+  <article id="content">
+    {{ .Content }}
+  </article>
 </section>
 
 <aside id="meta">
     <div>
     <section>
-      <h4 id="date"> {{ .Date.Format "Mon Jan 2, 2006" }} </h4>
-      <h5 id="wc"> {{ .FuzzyWordCount }} Words </h5>
     </section>
     <ul id="categories">
       {{ range .Params.topics }}

@@ -5,7 +5,9 @@
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <link rel="canonical" href="{{ .Permalink }}">
     <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab:300,400" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <title>{{.Title}} - Tristan Rice</title>
     <script type="application/ld+json">
       {
         "@context": "http://schema.org",
@@ -38,7 +40,7 @@
       body {
         font-family: 'Roboto', sans-serif;
         color: rgba(0,0,0,0.71);
-        padding: 10px;
+        padding: 16px;
       }
       a, h1 {
         color: #039be5;
@@ -58,9 +60,6 @@
       h1, h2, h3, h4, h5, h6 {
         font-family: 'Roboto Slab', serif;
       }
-      footer table {
-        width: 100%;
-      }
       body > section, body > header, body > footer, body > aside {
         max-width: 720px;
         margin: 32px auto;
@@ -77,8 +76,14 @@
       }
       amp-img.circle {
         border-radius: 1000px;
-        float: right;
-        margin-top: 32px;
+        margin: 0 auto;
+        display: block;
+      }
+      @media (min-width: 500px) {
+        amp-img.circle {
+          float: right;
+          margin: 0;
+        }
       }
       blockquote {
         margin-left: 0;
@@ -88,8 +93,33 @@
       tr td:first-child {
         padding-right: 5px;
       }
+      footer {
+        margin: 1em 0;
+        min-height: 1em;
+      }
       article > footer > a {
         float: right;
+      }
+      h2 + .post-meta {
+        margin-top: -1em;
+        margin-bottom: 1em;
+      }
+      .projects {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .projects > a {
+        margin: 32px;
+        text-align: center;
+        display: block;
+      }
+      .projects span {
+        margin-top: 1em;
+        display: block;
+      }
+      .projects i.fa {
+        font-size: 40px;
       }
     </style>
   </head>
