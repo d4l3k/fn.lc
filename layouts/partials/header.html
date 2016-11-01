@@ -3,9 +3,14 @@
   <head>
     <meta charset="utf-8">
     <script async src="https://cdn.ampproject.org/v0.js"></script>
+    {{if .Params.iframe}}
+    <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
+    {{end}}
     <link rel="canonical" href="{{ .Permalink }}">
     <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab:300,400" rel="stylesheet">
+    {{if or .IsHome .Params.fontawesome}}
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    {{end}}
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <title>{{.Title}} - Tristan Rice</title>
     <script type="application/ld+json">
