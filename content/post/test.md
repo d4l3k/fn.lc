@@ -2,6 +2,7 @@
 date: 2016-11-02T02:13:04Z
 draft: true
 title: Test Of Features
+image: /apocalyptic-sf-small.jpg
 ---
 
 <amp-img src="/apocalyptic-sf-small.jpg" width="1920" height="1440" layout="responsive">
