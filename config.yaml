@@ -1,6 +1,9 @@
 baseurl: "https://fn.lc/"
 title: "Tristan Rice"
 languageCode: "en-us"
+params:
+  authorImage: "https://avatars1.githubusercontent.com/u/909104?v=3&s=360"
+
 MetaDataFormat: "yaml"
 PygmentsCodeFences: true
 PygmentsUseClasses: true
