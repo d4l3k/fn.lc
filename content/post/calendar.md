@@ -2,7 +2,7 @@
 title: "Calendar"
 date: "2016-11-01T21:54:17Z"
 iframe: true
-url: /calendar
+url: /calendar/
 ---
 
 This is my weekly calendar. I'm typically available any time Monday to Friday

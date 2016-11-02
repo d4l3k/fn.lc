@@ -7,12 +7,16 @@
     <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
     {{end}}
     <link rel="canonical" href="{{ .Permalink }}">
-    <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab:300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto Mono|Roboto+Slab:300,400" rel="stylesheet">
     {{if or .IsHome .Params.fontawesome}}
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
     {{end}}
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <title>{{.Title}} - Tristan Rice</title>
+    <title>
+    {{if not .IsHome}}
+    {{.Title}} -
+    {{end}}
+    {{.Site.Title}}</title>
     <script type="application/ld+json">
       {
         "@context": "http://schema.org",
@@ -47,6 +51,9 @@
         color: rgba(0,0,0,0.71);
         padding: 16px;
       }
+      code, pre {
+        font-family: 'Roboto Mono', monospace;
+      }
       a, h1 {
         color: #039be5;
         text-decoration: none;
@@ -69,6 +76,14 @@
         max-width: 720px;
         margin: 32px auto;
       }
+      article > p > amp-img {
+        margin: 0 -16px;
+      }
+      @media (min-width: 940px) {
+        article > p > amp-img {
+          margin: 0 -100px;
+        }
+      }
       body > header, body > footer {
         text-align: center;
         margin: 64px auto;
@@ -79,6 +94,8 @@
       body > header > h1 {
         margin-bottom: 10px;
       }
+
+      {{ if .IsHome }}
       amp-img.circle {
         border-radius: 1000px;
         margin: 0 auto;
@@ -90,24 +107,8 @@
           margin: 0;
         }
       }
-      blockquote {
-        margin-left: 0;
-        padding-left: 10px;
-        border-left: 2px solid #039be5;
-      }
       tr td:first-child {
         padding-right: 5px;
-      }
-      footer {
-        margin: 1em 0;
-        min-height: 1em;
-      }
-      article > footer > a {
-        float: right;
-      }
-      h2 + .post-meta {
-        margin-top: -1em;
-        margin-bottom: 1em;
       }
       .projects {
         display: flex;
@@ -126,6 +127,39 @@
       .projects i.fa {
         font-size: 40px;
       }
+      {{ end }}
+
+      blockquote {
+        margin-left: 0;
+        padding-left: 10px;
+        border-left: 2px solid #039be5;
+      }
+      footer {
+        margin: 1em 0;
+        min-height: 1em;
+      }
+      article > footer > a, .previous {
+        float: right;
+      }
+      h2 + .post-meta {
+        margin-top: -1em;
+        margin-bottom: 1em;
+      }
+      .draft {
+        float: right;
+        font-size: 0.75em;
+      }
+      .highlight pre {
+        padding: 10px;
+      }
+      article table {
+        border-collapse: collapse;
+      }
+      article table td, article table th {
+        border: 1px solid #444;
+        padding: 6px 13px;
+      }
+      {{readFile "static/pygments-default.css" | safeCSS}}
     </style>
   </head>
   <body>
