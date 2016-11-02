@@ -149,9 +149,6 @@
         float: right;
         font-size: 0.75em;
       }
-      .highlight pre {
-        padding: 10px;
-      }
       article table {
         border-collapse: collapse;
       }
@@ -159,7 +156,25 @@
         border: 1px solid #444;
         padding: 6px 13px;
       }
-      {{readFile "static/pygments-default.css" | safeCSS}}
+      .highlight pre {
+        padding: 10px;
+        counter-reset: line-numbering;
+      }
+      .highlight pre a::before {
+        content: counter(line-numbering);
+        counter-increment: line-numbering;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        color: #586e75;
+      }
+      .highlight pre a::after {
+        content: " ";
+      }
+      {{readFile "static/solarized-dark.css" | safeCSS}}
     </style>
   </head>
   <body>
