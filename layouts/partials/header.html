@@ -77,6 +77,10 @@
         max-width: 720px;
         margin: 32px auto;
       }
+      article > p > img {
+        max-width: 100%;
+      }
+
       article > p > amp-img {
         margin: 0 -16px;
       }
@@ -157,9 +161,11 @@
         border: 1px solid #444;
         padding: 6px 13px;
       }
-      .highlight pre {
+      pre {
         padding: 10px;
         counter-reset: line-numbering;
+        background-color: #002b36;
+        color: #93a1a1;
       }
       .highlight pre a::before {
         content: counter(line-numbering);
@@ -171,6 +177,9 @@
         -ms-user-select: none;
         user-select: none;
         color: #586e75;
+      }
+      .highlight pre code {
+        white-space: pre-wrap;
       }
       .highlight pre a::after {
         content: " ";
