@@ -1,6 +1,6 @@
 <!doctype html>
 <html amp lang="en">
-  <head>
+  <head id>
     <meta charset="utf-8">
     <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
     {{if .Params.iframe}}
@@ -196,8 +196,8 @@
       }
       {{readFile "static/solarized-dark.css" | safeCSS}}
     </style>
-  </head>
-  <body>
+  </head id>
+  <body id>
     <header>
       <h1><a href="/">Tristan Rice</a></h1>
       <div>Software Engineer and Student</div>
