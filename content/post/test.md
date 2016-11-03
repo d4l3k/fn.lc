@@ -1,6 +1,5 @@
 ---
 date: 2016-11-02T02:13:04Z
-draft: true
 title: Test Of Features
 image: /apocalyptic-sf-small.jpg
 ---

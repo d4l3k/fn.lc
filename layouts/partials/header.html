@@ -2,10 +2,11 @@
 <html amp lang="en">
   <head>
     <meta charset="utf-8">
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
     {{if .Params.iframe}}
     <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
     {{end}}
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
     <link rel="canonical" href="{{ .Permalink }}">
     <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto Mono|Roboto+Slab:300,400" rel="stylesheet">
     {{if or .IsHome .Params.fontawesome}}
