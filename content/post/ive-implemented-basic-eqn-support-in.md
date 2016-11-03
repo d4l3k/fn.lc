@@ -2,13 +2,21 @@
     "slug": "ive-implemented-basic-eqn-support-in",
     "date": "2014-05-14T05:20:43.000Z",
     "tags": [],
-    "title": "I&rsquo;ve implemented basic &ldquo;=eqn()&rdquo; support in WebSync. Right now it just executes some javascript if the text in the cell starts with &ldquo;=&rdquo;. I&rsquo;ve also added in one helper function that returns the value of the cell in the format c(&ldquo;A1&rdquo;).",
+    "image": "/images/tumblr_n5jtijixpI1r7h2fto2_1280.png",
+    "title": "WebSyn.ca Equation Support",
     "publishdate": "2014-05-14T05:20:43.000Z"
 }
 
 
-![](/images/tumblr_n5jtijixpI1r7h2fto1_1280.png)
-![](/images/tumblr_n5jtijixpI1r7h2fto2_1280.png)
+<amp-img src="/images/tumblr_n5jtijixpI1r7h2fto1_1280.png" width="659" height="216" layout="responsive"></amp-img>
+
+
+
+<amp-img src="/images/tumblr_n5jtijixpI1r7h2fto2_1280.png" width="664" height="208" layout="responsive"></amp-img>
+
+I’ve implemented basic `=eqn()` support in WebSync. Right now it just executes
+some javascript if the text in the cell starts with `=`. I’ve also added in one
+helper function that returns the value of the cell in the format `c("A1")`.
 
 We’ll see how this goes. I’m extremely hesitant to allow people to run
 untrusted javascript code on people’s browsers. I might have to add in a

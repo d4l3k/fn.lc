@@ -3,7 +3,7 @@
 <section>
   <h2>Hi there!</h2>
   <amp-img class="circle" height="180" layout="fixed" width="180"
-           src="{{.Site.Params.authorImage}}"></amp-img>
+           src="{{.Site.Params.authorimage}}"></amp-img>
   <p>
   I'm Tristan Rice; Software Engineer and student at the University of British Columbia.
   </p>
@@ -15,7 +15,7 @@
       </tr>
       <tr>
         <td>GitHub
-        <td><a href="https://github.com">https://github.com</a>
+        <td><a href="https://github.com/d4l3k">https://github.com/d4l3k</a>
       </tr>
       <tr>
         <td>Resume
@@ -28,6 +28,10 @@
       <tr>
         <td>Keybase
         <td><a href="https://keybase.io/rice">https://keybase.io/rice</a>
+      </tr>
+      <tr>
+        <td>Calendar
+        <td><a href="https://fn.lc/calendar/">https://fn.lc/calendar/</a>
       </tr>
     </table>
   </blockquote>
@@ -68,15 +72,18 @@
   </div>
 </section>
 
-
 <section id="main">
-  <h2>Posts</h2>
+  <h2>Recent Posts</h2>
 
   <div>
-    {{ range first 10 .Data.Pages }}
+    {{ range first 3 .Data.Pages }}
         {{ .Render "summary"}}
     {{ end }}
   </div>
+  <br/>
+  <center>
+    <a href="/post/">View All {{ len .Data.Pages }} Posts</a>
+  </center>
 </section>
 
 {{ partial "footer.html" . }}

@@ -20,16 +20,22 @@
     <div>
     <section>
     </section>
-    <ul id="categories">
-      {{ range .Params.topics }}
-        <li><a href="{{ $baseurl }}/topics/{{ . | urlize }}">{{ . }}</a> </li>
-      {{ end }}
-    </ul>
-    <ul id="tags">
-      {{ range .Params.tags }}
-        <li> <a href="{{ $baseurl }}/tags/{{ . | urlize }}">{{ . }}</a> </li>
-      {{ end }}
-    </ul>
+    {{ if .Params.topics }}
+      <p id="categories">
+        Categories:
+        {{ range .Params.topics }}
+          <a href="{{ $baseurl }}/topics/{{ . | urlize }}/">{{ . }}</a>
+        {{ end }}
+      </p>
+    {{ end }}
+    {{ if .Params.tags }}
+      <p id="tags">
+				Tags:
+        {{ range .Params.tags }}
+          <a href="{{ $baseurl }}/tags/{{ . | urlize }}/">{{ . }}</a>
+        {{ end }}
+      </p>
+    {{ end }}
     </div>
     <div>
         {{ if .Prev }}
