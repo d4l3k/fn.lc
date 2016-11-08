@@ -1,0 +1,9 @@
+{{ $src := .Get "src" }}
+{{ $img := readFile (printf "/static/%s" $src) }}
+{{ $config := imageConfig $img }}
+
+<amp-img src="{{$src}}"
+           height="{{$config.Height}}"
+           width="{{$config.Width}}"
+           layout="responsive">
+</amp-img>
