@@ -8,6 +8,8 @@ url: /calendar/
 This is my weekly calendar. I'm typically available any time Monday to Friday
 9:00 to 17:00 unless listed as busy below.
 
+<!--more-->
+
 <amp-iframe width=300 height=300
   sandbox="allow-scripts allow-same-origin"
   layout="responsive"

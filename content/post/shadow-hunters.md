@@ -4,6 +4,11 @@ title: "Shadow Hunters: Roll Probabilities"
 iframe: true
 ---
 
+This contains a list of all the probabilities you might be interested in when
+playing the [Shadow Hunters board
+game](https://en.wikipedia.org/wiki/Shadow_Hunters).
+
+<!--more-->
 
 ### Areas (1d6 + 1d4)
 
@@ -11,9 +16,11 @@ iframe: true
 
 http://anydice.com/program/1e8
 
-### Damage Rolls (1d6 - 1d4)
+### Attack Damage (1d6 - 1d4)
 
 {{< chart src="/chart/shadowhunters-areas/" hash="damage" >}}
+
+
 
 Mean | Deviation
 ---- | ---------
@@ -22,9 +29,11 @@ Mean | Deviation
 http://anydice.com/program/9cd8
 
 
-### Damage Roll (1d4)
+### Attack Damage with Sword (1d4)
 
 {{< chart src="/chart/shadowhunters-areas/" hash="damage-sword" >}}
+
+
 
 Mean | Deviation
 ---- | ---------
@@ -44,3 +53,8 @@ items are given 1/2 of the time and a full heal means 7 health.
 {{< chart src="/chart/shadowhunters-areas/" hash="health-other" >}}
 
 Same assumptions as above.
+
+### Credits
+
+Damage and health numbers were taken from
+https://boardgamegeek.com/thread/651736/card-list.
