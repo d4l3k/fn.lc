@@ -1,0 +1,54 @@
+<style>
+body, div, #cht {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+</style>
+<div>
+  <canvas id="cht"></canvas>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.bundle.min.js" integrity="sha256-1uH5nQ+1cUZEU9YOfMzc9rapsWyuGtvKPpvKN9xDgug=" crossorigin="anonymous"></script>
+<script>
+Chart.helpers.addResizeListener = function(node, callback){ };
+Chart.defaults.global.maintainAspectRatio = false;
+Chart.defaults.global.legend.display = false;
+var ctx = document.getElementById("cht");
+var colors = [
+  "#2196F3",
+  "#03A9F4",
+  "#00BCD4",
+  "#009688",
+  "#4CAF50",
+  "#8BC34A",
+  "#CDDC39",
+  "#FFEB3B",
+  "#FFC107",
+  "#FF9800",
+  "#FF5722",
+  "#795548",
+  "#F44336",
+  "#E91E63",
+  "#9C27B0",
+  "#673AB7",
+  "#3F51B5"
+];
+var ci = 0;
+function c(n) {
+  if (n) {
+    return Array.apply(null, Array(n)).map(() => c());
+  }
+  var col = colors[ci];
+  ci = (ci + 1) % colors.length;
+  return col;
+}
+var resize = () => {
+  if (ctx.chart) {
+    ctx.chart.resize();
+  }
+};
+window.addEventListener("resize", resize);
+</script>
+{{ .Content }}
