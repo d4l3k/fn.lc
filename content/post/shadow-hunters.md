@@ -1,6 +1,6 @@
 ---
 date: 2016-11-08T02:45:00Z
-title: Shadow Hunters Roll Probabilities
+title: "Shadow Hunters: Roll Probabilities"
 iframe: true
 ---
 
