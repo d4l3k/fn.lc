@@ -1,11 +1,11 @@
 ---
 date: 2016-11-02T02:13:04Z
+lastmod: 2016-12-20T12:41:32-08:00
 title: Test Of Features
 image: /apocalyptic-sf-small.jpg
 ---
 
-<amp-img src="/apocalyptic-sf-small.jpg" width="1920" height="1440" layout="responsive">
-</amp-img>
+{{< amp-img src="/apocalyptic-sf-small.jpg" >}}
 
 I've been doing a bunch of work on this site. This is a test page for all the
 different visual elements.

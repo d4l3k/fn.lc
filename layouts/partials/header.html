@@ -8,9 +8,9 @@
     {{end}}
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <link rel="canonical" href="{{ .Permalink }}">
-		{{ if .RSSlink }}
-		<link href="{{ .RSSlink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
-		<link href="{{ .RSSlink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
+		{{ if .RSSLink }}
+		<link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+		<link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
 		{{ end }}
     <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto Mono|Roboto+Slab:300,400" rel="stylesheet">
     {{if or .IsHome .Params.fontawesome}}
@@ -162,6 +162,9 @@
       h2 + .post-meta, h3 + .post-meta {
         margin-top: -1em;
         margin-bottom: 1em;
+      }
+      .right {
+        float: right;
       }
       .draft {
         float: right;

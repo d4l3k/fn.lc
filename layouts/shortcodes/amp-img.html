@@ -1,6 +1,5 @@
 {{ $src := .Get "src" }}
-{{ $img := readFile (printf "/static/%s" $src) }}
-{{ $config := imageConfig $img }}
+{{ $config := imageConfig (printf "/static/%s" $src) }}
 
 <amp-img src="{{$src}}"
            height="{{$config.Height}}"
