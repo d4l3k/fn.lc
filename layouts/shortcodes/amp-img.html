@@ -1,8 +1,11 @@
 {{ $src := .Get "src" }}
-{{ $config := imageConfig (printf "/static/%s" $src) }}
+{{ $path := printf "/static/%s" $src }}
+{{ $config := imageConfig $path }}
 
+<a href="{{ $src }}">
 <amp-img src="{{$src}}"
            height="{{$config.Height}}"
            width="{{$config.Width}}"
            layout="responsive">
 </amp-img>
+</a>
