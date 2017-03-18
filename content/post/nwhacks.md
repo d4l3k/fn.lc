@@ -6,7 +6,10 @@ image: /images/www.nwhacks.io.png
 
 With [nwHacks 2017](https://www.nwhacks.io) coming up this weekend I figured it
 would be a good time to do a writeup of the tech stack and all the different
-components that are used to make the hackathon a success.
+components that are used to make the hackathon a success. This covers all of the
+different components of the stack and what technologies were used.
+
+<!--more-->
 
 ## [Main Website](https://www.nwhacks.io)
 
