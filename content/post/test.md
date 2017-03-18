@@ -5,7 +5,7 @@ title: Test Of Features
 image: /apocalyptic-sf-small.jpg
 ---
 
-{{< amp-img src="/apocalyptic-sf-small.jpg" >}}
+{{< amp-img src="/apocalyptic-sf-small.jpg" />}}
 
 I've been doing a bunch of work on this site. This is a test page for all the
 different visual elements.
