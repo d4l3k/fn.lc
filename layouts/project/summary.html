@@ -1,0 +1,33 @@
+<article class="post icon">
+  {{ $github := index .Site.Data.github (lower .Params.github) }}
+
+  {{ if .Params.icon }}
+    <i class="fa fa-{{.Params.icon}} summary-icon" aria-hidden="true"></i>
+  {{ end }}
+
+  <div class="post-container">
+    <header>
+      <h3>
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+        {{ if .Draft }}
+        <span class="draft">DRAFT</span>
+        {{end}}
+      </h3>
+      <div class="post-meta">
+        {{ partial "github.html" . }}
+      </div>
+    </header>
+
+    <p>
+      {{ $github.description }}
+    </p>
+
+    <p>
+    {{ .Summary }}
+    </p>
+
+    <footer>
+      <a class="right" href='{{ .Permalink }}'><nobr>Read more →</nobr></a>
+    </footer>
+  </div>
+</article>

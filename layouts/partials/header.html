@@ -13,7 +13,7 @@
 		<link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
 		{{ end }}
     <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto Mono|Roboto+Slab:300,400" rel="stylesheet">
-    {{if or .IsHome .Params.fontawesome}}
+    {{if or .IsHome .Params.fontawesome (eq .Section "project")}}
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
     {{end}}
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
@@ -87,10 +87,13 @@
         max-width: 720px;
         margin: 32px auto;
       }
+      article {
+        overflow: hidden;
+      }
       article > table, article > amp-iframe {
         margin: 1em 0;
       }
-      p {
+      p, a.center {
         margin: 1em 0;
         line-height: 1.5;
       }
@@ -113,6 +116,9 @@
       body > header, body > footer {
         text-align: center;
         margin: 64px auto;
+      }
+      body > footer a {
+        margin: 1em;
       }
       body > header {
         text-align: center;
@@ -164,14 +170,15 @@
         margin: 1em 0;
         min-height: 1em;
       }
-      article > footer > a, .previous {
-        float: right;
-      }
       h2 + .post-meta, h3 + .post-meta {
         margin-top: -1em;
         margin-bottom: 1em;
       }
-      .right {
+      .center {
+        display: block;
+        text-align: center;
+      }
+      .right, .previous {
         float: right;
       }
       .draft {
@@ -228,7 +235,22 @@
       .highlight pre a::after {
         content: " ";
       }
+      article.icon {
+        display: flex;
+      }
+      article.icon .post-container {
+        flex-grow: 10000;
+      }
+      i.summary-icon {
+        font-size: 40px;
+        width: 100px;
+        margin: 35px 0;
+        text-align: center;
+      flex-shrink: 0;
+      }
       {{readFile "static/solarized-dark.css" | safeCSS}}
+      {{ block "styles" . }}
+      {{ end }}
     </style>
   </head id>
   <body id>

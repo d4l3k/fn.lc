@@ -1,0 +1,13 @@
+{{ $github := index .Site.Data.github (lower .Params.github) }}
+
+{{ if $github }}
+
+  {{ if .Params.site }}
+  <a href="{{.Params.site}}">Live Site</a> -
+  {{ end }}
+
+  ⭐ {{ $github.stargazers_count }} -
+  <a href="{{ $github.html_url }}">Source Code</a> -
+  Last Push: {{ dateFormat "Mon Jan 2, 2006" $github.updated_at }}
+
+{{ end }}

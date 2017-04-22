@@ -38,89 +38,34 @@
 </section>
 
 <section>
-  <h2>Projects</h2>
+  <h2>Top Projects</h2>
 
-  <div class="projects">
-    <a href="https://websyn.ca">
-      <i class="fa fa-file-o" aria-hidden="true"></i>
-      <span>WebSyn.ca</span>
-    </a>
-    <a href="https://fn.lc/ficrecommend/">
-      <i class="fa fa-book" aria-hidden="true"></i>
-      <span>Fic Recommend</span>
-    </a>
-    <a href="https://fn.lc/comicstarship/">
-      <i class="fa fa-space-shuttle" aria-hidden="true"></i>
-      <span>Comic Starship</span>
-    </a>
-    <a href="https://fn.lc/short">
-      <i class="fa fa-link" aria-hidden="true"></i>
-      <span>URL Shortener</span>
-    </a>
-    <a href="https://campus.fn.lc/">
-      <i class="fa fa-map-o" aria-hidden="true"></i>
-      <span>UBC Campus Map</span>
-    </a>
-    <a href="https://fn.lc/upass/">
-      <i class="fa fa-bus" aria-hidden="true"></i>
-      <span>UPass Renewer</span>
-    </a>
-    <a href="https://fn.lc/hw/">
-      <i class="fa fa-calendar" aria-hidden="true"></i>
-      <span>UBC Homework</span>
-    </a>
-    <a href="https://github.com/degdb/degdb">
-      <i class="fa fa-share-alt" aria-hidden="true"></i>
-      <span>degdb</span>
-    </a>
-    <a href="https://github.com/d4l3k/skeletondb">
-      <i class="fa fa-bolt" aria-hidden="true"></i>
-      <span>skeletondb</span>
-    </a>
-    <a href="https://github.com/d4l3k/webrtc-lobby">
-      <i class="fa fa-gamepad" aria-hidden="true"></i>
-      <span>webrtc-lobby</span>
-    </a>
-    <a href="https://github.com/d4l3k/go-sct">
-      <i class="fa fa-sun-o" aria-hidden="true"></i>
-      <span>go-sct</span>
-    </a>
-    <a href="https://github.com/d4l3k/go-pry">
-      <i class="fa fa-terminal" aria-hidden="true"></i>
-      <span>go-pry</span>
-    </a>
-    <a href="https://opentetrisarena.fn.lc/">
-      <i class="fa fa-gamepad" aria-hidden="true"></i>
-      <span>Open Tetris Arena</span>
-    </a>
-    <a href="https://consensus.fn.lc/">
-      <i class="fa fa-university" aria-hidden="true"></i>
-      <span>Consensus Slides</span>
-    </a>
-    <a href="https://exams.ubccsss.org/">
-      <i class="fa fa-database" aria-hidden="true"></i>
-      <span>CSSS Exam DB</span>
-    </a>
-    <a href="https://www.nwhacks.io/">
-      <i class="fa fa-laptop" aria-hidden="true"></i>
-      <span>nwHacks</span>
-    </a>
+  <div>
+    {{ range first 3 (where .Data.Pages "Section" "project") }}
+        {{ .Render "summary"}}
+    {{ end }}
   </div>
-  <a class="right" href="https://github.com/d4l3k">See more on GitHub →</a>
+
+  <a class="center" href="/project/">
+    View All
+    {{ len (where .Data.Pages "Section" "project") }}
+    Featured Projects
+  </a>
+
+  <a class="center" href="https://github.com/d4l3k">
+    See all {{ len .Site.Data.github }} projects on GitHub
+  </a>
 </section>
 
 <section id="main">
   <h2>Recent Posts</h2>
 
   <div>
-    {{ range first 3 .Data.Pages }}
-        {{ .Render "summary"}}
+    {{ range first 3 (where .Data.Pages "Section" "post") }}
+        {{ .Render "summary" }}
     {{ end }}
   </div>
-  <br/>
-  <center>
-    <a href="/post/">View All {{ len .Data.Pages }} Posts</a>
-  </center>
+  <a class="center" href="/post/">View All {{ len (where .Data.Pages "Section" "post") }} Posts</a>
 </section>
 
 {{ partial "footer.html" . }}
