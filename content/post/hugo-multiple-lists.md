@@ -6,6 +6,7 @@ tags:
   - hugo
   - tcf
   - csss
+  - ubc
 ---
 
 <amp-img src="/images/career-fair-59_small.jpg" width="1024" height="681" layout="responsive"></amp-img>

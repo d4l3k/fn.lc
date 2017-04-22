@@ -3,6 +3,9 @@ date: 2016-11-02T02:13:04Z
 lastmod: 2016-12-20T12:41:32-08:00
 title: Test Of Features
 image: /apocalyptic-sf-small.jpg
+tags:
+  - test
+  - website
 ---
 
 {{< amp-img src="/apocalyptic-sf-small.jpg" />}}
@@ -39,3 +42,6 @@ Tables are pretty cool.
  Duck | Cow | Chicken
  5    | 10  | 9
 
+### Horizontal Rule
+
+----

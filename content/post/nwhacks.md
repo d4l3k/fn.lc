@@ -2,6 +2,11 @@
 date: 2017-03-17T19:19:15-07:00
 title: nwHacks 2017 Tech Stack
 image: /images/www.nwhacks.io.png
+tags:
+  - ubc
+  - nwhacks
+  - go
+  - polymer
 ---
 
 With [nwHacks 2017](https://www.nwhacks.io) coming up this weekend I figured it

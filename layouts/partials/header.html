@@ -178,12 +178,23 @@
         float: right;
         font-size: 0.75em;
       }
+      hr {
+        border: none;
+        display: block;
+        height: 2px;
+        background-color: rgba(0,0,0,0.1);
+      }
       article table {
         border-collapse: collapse;
       }
+      article table th {
+        border-bottom: 2px solid rgba(0,0,0,0.1);
+      }
+      article table tr:nth-child(2n) {
+        background-color: rgba(0,0,0,0.05);
+      }
       article table td, article table th {
-        border: 1px solid #444;
-        padding: 6px 13px;
+        padding: 0.5em 0.8em;
       }
       pre {
         margin: 0 -16px;
