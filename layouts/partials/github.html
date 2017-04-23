@@ -3,11 +3,9 @@
 {{ if $github }}
 
   {{ if .Params.site }}
-  <a href="{{.Params.site}}">Live Site</a> -
+  <span><a href="{{.Params.site}}">Live Site</a></span>
   {{ end }}
 
-  ⭐ {{ $github.stargazers_count }} -
-  <a href="{{ $github.html_url }}">Source Code</a> -
-  Last Push: {{ dateFormat "Mon Jan 2, 2006" $github.updated_at }}
-
+  <span><a href="{{ $github.html_url }}">Source Code</a></span>
+  <span>⭐ {{ $github.stargazers_count }}</span>
 {{ end }}

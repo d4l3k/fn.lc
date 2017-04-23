@@ -1,7 +1,8 @@
 ---
-date: 2017-04-22T15:24:19-07:00
+date: 2016-01-23T00:15:27Z
 github: degdb/degdb
 icon: share-alt
+stars: 172
 title: degdb
+weight: 173
 ---
-

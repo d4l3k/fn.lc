@@ -87,9 +87,6 @@
         max-width: 720px;
         margin: 32px auto;
       }
-      article {
-        overflow: hidden;
-      }
       article > table, article > amp-iframe {
         margin: 1em 0;
       }
@@ -174,6 +171,13 @@
         margin-top: -1em;
         margin-bottom: 1em;
       }
+      .post-meta {
+        line-height: 1.5;
+      }
+      .post-meta span {
+        margin-right: 1em;
+        white-space: nowrap;
+      }
       .center {
         display: block;
         text-align: center;
@@ -241,12 +245,21 @@
       article.icon .post-container {
         flex-grow: 10000;
       }
+      article.icon .post-container h3 {
+        margin-top: 0;
+      }
       i.summary-icon {
         font-size: 40px;
         width: 100px;
-        margin: 35px 0;
+        margin-top: 35px;
         text-align: center;
-      flex-shrink: 0;
+        flex-shrink: 0;
+      }
+      @media (max-width: 400px) {
+        i.summary-icon {
+          width: 70px;
+          margin-left: -16px;
+        }
       }
       {{readFile "static/solarized-dark.css" | safeCSS}}
       {{ block "styles" . }}

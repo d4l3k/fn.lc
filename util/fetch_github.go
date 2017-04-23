@@ -1,12 +1,15 @@
 package main
 
 import (
+	"bytes"
 	"encoding/json"
 	"log"
 	"net/http"
 	"os"
 	"path/filepath"
 	"strings"
+
+	yaml "gopkg.in/yaml.v2"
 
 	"github.com/gernest/front"
 	"github.com/tomnomnom/linkheader"
@@ -15,12 +18,19 @@ import (
 const baseURL = "https://api.github.com/users/d4l3k/repos?type=all"
 
 func main() {
+	token := os.Getenv("GITHUB_TOKEN")
+
+	log.SetFlags(log.Flags() | log.Lshortfile)
+
 	final := map[string]map[string]interface{}{}
 
 	log.SetOutput(os.Stderr)
 	nextURL := baseURL
 outer:
 	for {
+		if len(token) > 0 {
+			nextURL += "&access_token=" + token
+		}
 		log.Printf("Fetching: %s", nextURL)
 		req, err := http.Get(nextURL)
 		if err != nil {
@@ -70,17 +80,35 @@ outer:
 		if err != nil {
 			log.Fatal(err)
 		}
+		fo.Close()
 		github, ok := front["github"]
 		if ok {
 			details, ok := final[github.(string)]
 			if !ok {
 				log.Printf("can't find github repo %q", github)
 			}
-			front["date"] = details["updated_at"].(string)
+			front["date"] = details["pushed_at"].(string)
 			front["stars"] = details["stargazers_count"].(float64)
-			log.Println("front", front)
+			front["weight"] = details["stargazers_count"].(float64) + 1
 		}
-		_ = body
+		var buf bytes.Buffer
+		buf.WriteString("---\n")
+		yamlBytes, err := yaml.Marshal(front)
+		if err != nil {
+			log.Fatal(err)
+		}
+		buf.Write(yamlBytes)
+		buf.WriteString("---\n")
+		buf.WriteString(body)
+
+		fo, err = os.OpenFile(f, os.O_WRONLY, 0755)
+		if err != nil {
+			log.Fatal(err)
+		}
+		if _, err := buf.WriteTo(fo); err != nil {
+			log.Fatal(err)
+		}
+
 		fo.Close()
 	}
 }

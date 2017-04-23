@@ -41,7 +41,15 @@
   <h2>Top Projects</h2>
 
   <div>
-    {{ range first 3 (where .Data.Pages "Section" "project") }}
+    {{ range first 3 (where .Data.Pages.ByWeight.Reverse "Section" "project") }}
+        {{ .Render "summary"}}
+    {{ end }}
+  </div>
+
+  <h2>Latest Projects</h2>
+
+  <div>
+    {{ range first 3 (where .Data.Pages.ByDate.Reverse "Section" "project") }}
         {{ .Render "summary"}}
     {{ end }}
   </div>

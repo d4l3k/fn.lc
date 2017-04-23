@@ -6,8 +6,11 @@
             <span class="draft">DRAFT</span>
             {{end}}
         </h3>
-        <div class="post-meta">{{ .Date.Format "Mon Jan 2, 2006" }} - {{ .ReadingTime }}
-            Minutes - {{ .FuzzyWordCount }} Words</div>
+        <div class="post-meta">
+            <span>{{ .Date.Format "Mon Jan 2, 2006" }}</span>
+            <span>{{ .ReadingTime }} Minutes</span>
+            <span>{{ .FuzzyWordCount }} Words</span>
+        </div>
     </header>
 
     <p>
@@ -15,6 +18,6 @@
     </p>
 
     <footer>
-        <a href='{{ .Permalink }}'><nobr>Read more →</nobr></a>
+        <a class="right" href='{{ .Permalink }}'><nobr>Read more →</nobr></a>
     </footer>
 </article>

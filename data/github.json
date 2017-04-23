@@ -68,6 +68,11 @@
       "type": "User",
       "url": "https://api.github.com/users/aomarks"
     },
+    "permissions": {
+      "admin": false,
+      "pull": true,
+      "push": true
+    },
     "private": false,
     "pulls_url": "https://api.github.com/repos/aomarks/bridgesim/pulls{/number}",
     "pushed_at": "2016-12-01T04:55:10Z",
@@ -156,6 +161,11 @@
       "subscriptions_url": "https://api.github.com/users/c00w/subscriptions",
       "type": "User",
       "url": "https://api.github.com/users/c00w"
+    },
+    "permissions": {
+      "admin": false,
+      "pull": true,
+      "push": true
     },
     "private": false,
     "pulls_url": "https://api.github.com/repos/c00w/spinal/pulls{/number}",
@@ -246,6 +256,11 @@
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
     },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
+    },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/0-10DHT/pulls{/number}",
     "pushed_at": "2014-10-24T06:02:03Z",
@@ -334,6 +349,11 @@
       "subscriptions_url": "https://api.github.com/users/d4l3k/subscriptions",
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
+    },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
     },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/autocomplete-json-bst/pulls{/number}",
@@ -424,6 +444,11 @@
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
     },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
+    },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/BoomFilters/pulls{/number}",
     "pushed_at": "2016-01-19T20:38:13Z",
@@ -512,6 +537,11 @@
       "subscriptions_url": "https://api.github.com/users/d4l3k/subscriptions",
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
+    },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
     },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/bridgesim-assets/pulls{/number}",
@@ -602,6 +632,11 @@
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
     },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
+    },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/btcinterned/pulls{/number}",
     "pushed_at": "2016-01-30T07:32:27Z",
@@ -690,6 +725,11 @@
       "subscriptions_url": "https://api.github.com/users/d4l3k/subscriptions",
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
+    },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
     },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/btcwallet/pulls{/number}",
@@ -780,6 +820,11 @@
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
     },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
+    },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/Bukkit-Miniplugs/pulls{/number}",
     "pushed_at": "2012-01-26T02:34:14Z",
@@ -868,6 +913,11 @@
       "subscriptions_url": "https://api.github.com/users/d4l3k/subscriptions",
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
+    },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
     },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/bypass/pulls{/number}",
@@ -958,6 +1008,11 @@
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
     },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
+    },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/cah-up/pulls{/number}",
     "pushed_at": "2015-04-02T21:26:53Z",
@@ -1046,6 +1101,11 @@
       "subscriptions_url": "https://api.github.com/users/d4l3k/subscriptions",
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
+    },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
     },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/campus/pulls{/number}",
@@ -1136,6 +1196,11 @@
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
     },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
+    },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/CatNap/pulls{/number}",
     "pushed_at": "2014-03-21T23:57:49Z",
@@ -1224,6 +1289,11 @@
       "subscriptions_url": "https://api.github.com/users/d4l3k/subscriptions",
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
+    },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
     },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/cayley/pulls{/number}",
@@ -1314,6 +1384,11 @@
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
     },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
+    },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/chesms/pulls{/number}",
     "pushed_at": "2015-10-18T22:46:01Z",
@@ -1402,6 +1477,11 @@
       "subscriptions_url": "https://api.github.com/users/d4l3k/subscriptions",
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
+    },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
     },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/chmac/pulls{/number}",
@@ -1492,6 +1572,11 @@
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
     },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
+    },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/cockroach/pulls{/number}",
     "pushed_at": "2016-09-02T19:53:26Z",
@@ -1580,6 +1665,11 @@
       "subscriptions_url": "https://api.github.com/users/d4l3k/subscriptions",
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
+    },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
     },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/comic-rocket-api/pulls{/number}",
@@ -1670,6 +1760,11 @@
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
     },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
+    },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/comic-starship/pulls{/number}",
     "pushed_at": "2016-12-28T04:21:29Z",
@@ -1758,6 +1853,11 @@
       "subscriptions_url": "https://api.github.com/users/d4l3k/subscriptions",
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
+    },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
     },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/compute-archlinux-image-builder/pulls{/number}",
@@ -1848,6 +1948,11 @@
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
     },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
+    },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/config-files/pulls{/number}",
     "pushed_at": "2017-03-12T19:44:01Z",
@@ -1936,6 +2041,11 @@
       "subscriptions_url": "https://api.github.com/users/d4l3k/subscriptions",
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
+    },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
     },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/consensus-slides/pulls{/number}",
@@ -2026,6 +2136,11 @@
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
     },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
+    },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/cs213/pulls{/number}",
     "pushed_at": "2016-08-25T01:54:07Z",
@@ -2114,6 +2229,11 @@
       "subscriptions_url": "https://api.github.com/users/d4l3k/subscriptions",
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
+    },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
     },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/cs221/pulls{/number}",
@@ -2204,6 +2324,11 @@
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
     },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
+    },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/cs314/pulls{/number}",
     "pushed_at": "2016-08-25T01:59:40Z",
@@ -2292,6 +2417,11 @@
       "subscriptions_url": "https://api.github.com/users/d4l3k/subscriptions",
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
+    },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
     },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/csss-qr-tracker/pulls{/number}",
@@ -2382,6 +2512,11 @@
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
     },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
+    },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/cubewm-client/pulls{/number}",
     "pushed_at": "2015-03-14T03:22:28Z",
@@ -2470,6 +2605,11 @@
       "subscriptions_url": "https://api.github.com/users/d4l3k/subscriptions",
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
+    },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
     },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/d4l3k.github.com/pulls{/number}",
@@ -2560,6 +2700,11 @@
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
     },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
+    },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/dm-cassandra/pulls{/number}",
     "pushed_at": "2010-12-25T23:41:22Z",
@@ -2648,6 +2793,11 @@
       "subscriptions_url": "https://api.github.com/users/d4l3k/subscriptions",
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
+    },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
     },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/dm-riak-adapter/pulls{/number}",
@@ -2738,6 +2888,11 @@
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
     },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
+    },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/docconv/pulls{/number}",
     "pushed_at": "2017-01-12T20:31:08Z",
@@ -2826,6 +2981,11 @@
       "subscriptions_url": "https://api.github.com/users/d4l3k/subscriptions",
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
+    },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
     },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/dominos.ca-coupons/pulls{/number}",
@@ -2916,6 +3076,11 @@
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
     },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
+    },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/dot-llama/pulls{/number}",
     "pushed_at": "2014-06-05T05:44:56Z",
@@ -3004,6 +3169,11 @@
       "subscriptions_url": "https://api.github.com/users/d4l3k/subscriptions",
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
+    },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
     },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/electrostatics.js/pulls{/number}",
@@ -3094,6 +3264,11 @@
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
     },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
+    },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/eng110/pulls{/number}",
     "pushed_at": "2016-12-07T22:14:02Z",
@@ -3182,6 +3357,11 @@
       "subscriptions_url": "https://api.github.com/users/d4l3k/subscriptions",
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
+    },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
     },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/epaxos/pulls{/number}",
@@ -3272,6 +3452,11 @@
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
     },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
+    },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/faraday/pulls{/number}",
     "pushed_at": "2013-11-09T15:54:22Z",
@@ -3360,6 +3545,11 @@
       "subscriptions_url": "https://api.github.com/users/d4l3k/subscriptions",
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
+    },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
     },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/ffi-tox/pulls{/number}",
@@ -3450,6 +3640,11 @@
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
     },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
+    },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/ficrecommend/pulls{/number}",
     "pushed_at": "2016-07-09T18:53:30Z",
@@ -3538,6 +3733,11 @@
       "subscriptions_url": "https://api.github.com/users/d4l3k/subscriptions",
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
+    },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
     },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/FicSave/pulls{/number}",
@@ -3628,6 +3828,11 @@
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
     },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
+    },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/fn.lc/pulls{/number}",
     "pushed_at": "2017-04-22T04:40:51Z",
@@ -3716,6 +3921,11 @@
       "subscriptions_url": "https://api.github.com/users/d4l3k/subscriptions",
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
+    },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
     },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/gce-launcher/pulls{/number}",
@@ -3806,6 +4016,11 @@
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
     },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
+    },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/GitStats/pulls{/number}",
     "pushed_at": "2014-02-08T21:08:03Z",
@@ -3894,6 +4109,11 @@
       "subscriptions_url": "https://api.github.com/users/d4l3k/subscriptions",
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
+    },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
     },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/gittodoblamer/pulls{/number}",
@@ -3984,6 +4204,11 @@
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
     },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
+    },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/go/pulls{/number}",
     "pushed_at": "2015-10-15T04:14:16Z",
@@ -4072,6 +4297,11 @@
       "subscriptions_url": "https://api.github.com/users/d4l3k/subscriptions",
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
+    },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
     },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/go-disk-usage/pulls{/number}",
@@ -4162,6 +4392,11 @@
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
     },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
+    },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/go-electrum/pulls{/number}",
     "pushed_at": "2015-12-02T23:16:16Z",
@@ -4250,6 +4485,11 @@
       "subscriptions_url": "https://api.github.com/users/d4l3k/subscriptions",
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
+    },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
     },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/go-funimation/pulls{/number}",
@@ -4340,6 +4580,11 @@
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
     },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
+    },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/go-highlight/pulls{/number}",
     "pushed_at": "2017-01-31T09:15:08Z",
@@ -4428,6 +4673,11 @@
       "subscriptions_url": "https://api.github.com/users/d4l3k/subscriptions",
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
+    },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
     },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/go-internetarchive/pulls{/number}",
@@ -4518,6 +4768,11 @@
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
     },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
+    },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/go-nnforge/pulls{/number}",
     "pushed_at": "2015-02-16T07:38:41Z",
@@ -4606,6 +4861,11 @@
       "subscriptions_url": "https://api.github.com/users/d4l3k/subscriptions",
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
+    },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
     },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/go-pcre/pulls{/number}",
@@ -4696,6 +4956,11 @@
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
     },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
+    },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/go-premailer/pulls{/number}",
     "pushed_at": "2015-08-15T07:37:39Z",
@@ -4784,6 +5049,11 @@
       "subscriptions_url": "https://api.github.com/users/d4l3k/subscriptions",
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
+    },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
     },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/go-pry/pulls{/number}",
@@ -4874,6 +5144,11 @@
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
     },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
+    },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/go-sct/pulls{/number}",
     "pushed_at": "2016-05-29T17:00:22Z",
@@ -4962,6 +5237,11 @@
       "subscriptions_url": "https://api.github.com/users/d4l3k/subscriptions",
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
+    },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
     },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/gocoin/pulls{/number}",
@@ -5052,6 +5332,11 @@
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
     },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
+    },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/gocoin-electrum/pulls{/number}",
     "pushed_at": "2015-12-04T23:42:02Z",
@@ -5140,6 +5425,11 @@
       "subscriptions_url": "https://api.github.com/users/d4l3k/subscriptions",
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
+    },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
     },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/gole/pulls{/number}",
@@ -5230,6 +5520,11 @@
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
     },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
+    },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/gopass/pulls{/number}",
     "pushed_at": "2015-11-20T22:18:19Z",
@@ -5318,6 +5613,11 @@
       "subscriptions_url": "https://api.github.com/users/d4l3k/subscriptions",
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
+    },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
     },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/gorm/pulls{/number}",
@@ -5408,6 +5708,11 @@
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
     },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
+    },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/goveralls/pulls{/number}",
     "pushed_at": "2016-01-08T18:04:25Z",
@@ -5496,6 +5801,11 @@
       "subscriptions_url": "https://api.github.com/users/d4l3k/subscriptions",
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
+    },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
     },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/hasbi/pulls{/number}",
@@ -5586,6 +5896,11 @@
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
     },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
+    },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/httpclient/pulls{/number}",
     "pushed_at": "2013-02-24T12:53:51Z",
@@ -5674,6 +5989,11 @@
       "subscriptions_url": "https://api.github.com/users/d4l3k/subscriptions",
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
+    },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
     },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/hugo/pulls{/number}",
@@ -5764,6 +6084,11 @@
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
     },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
+    },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/hw-fetcher/pulls{/number}",
     "pushed_at": "2017-01-09T03:34:10Z",
@@ -5852,6 +6177,11 @@
       "subscriptions_url": "https://api.github.com/users/d4l3k/subscriptions",
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
+    },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
     },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/hyprest/pulls{/number}",
@@ -5942,6 +6272,11 @@
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
     },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
+    },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/IWantToHackNotFillOutForms/pulls{/number}",
     "pushed_at": "2015-08-19T17:07:44Z",
@@ -6030,6 +6365,11 @@
       "subscriptions_url": "https://api.github.com/users/d4l3k/subscriptions",
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
+    },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
     },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/js-framework-benchmark/pulls{/number}",
@@ -6120,6 +6460,11 @@
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
     },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
+    },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/learning-time-predictor/pulls{/number}",
     "pushed_at": "2015-03-13T21:06:29Z",
@@ -6208,6 +6553,11 @@
       "subscriptions_url": "https://api.github.com/users/d4l3k/subscriptions",
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
+    },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
     },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/ledisdb/pulls{/number}",
@@ -6298,6 +6648,11 @@
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
     },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
+    },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/LibreLint/pulls{/number}",
     "pushed_at": "2014-06-16T23:01:43Z",
@@ -6386,6 +6741,11 @@
       "subscriptions_url": "https://api.github.com/users/d4l3k/subscriptions",
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
+    },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
     },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/Link/pulls{/number}",
@@ -6476,6 +6836,11 @@
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
     },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
+    },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/lint/pulls{/number}",
     "pushed_at": "2016-08-03T20:38:59Z",
@@ -6564,6 +6929,11 @@
       "subscriptions_url": "https://api.github.com/users/d4l3k/subscriptions",
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
+    },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
     },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/linux-insides/pulls{/number}",
@@ -6654,6 +7024,11 @@
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
     },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
+    },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/madness-v2/pulls{/number}",
     "pushed_at": "2014-11-17T21:52:41Z",
@@ -6742,6 +7117,11 @@
       "subscriptions_url": "https://api.github.com/users/d4l3k/subscriptions",
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
+    },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
     },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/mailgun-go/pulls{/number}",
@@ -6832,6 +7212,11 @@
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
     },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
+    },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/MasteringPhysicsLogin/pulls{/number}",
     "pushed_at": "2014-02-11T20:17:53Z",
@@ -6920,6 +7305,11 @@
       "subscriptions_url": "https://api.github.com/users/d4l3k/subscriptions",
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
+    },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
     },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/mathquill/pulls{/number}",
@@ -7010,6 +7400,11 @@
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
     },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
+    },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/messagediff/pulls{/number}",
     "pushed_at": "2016-12-20T21:04:39Z",
@@ -7098,6 +7493,11 @@
       "subscriptions_url": "https://api.github.com/users/d4l3k/subscriptions",
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
+    },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
     },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/MinnesotaBoat/pulls{/number}",
@@ -7188,6 +7588,11 @@
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
     },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
+    },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/motorcar/pulls{/number}",
     "pushed_at": "2015-03-15T08:54:27Z",
@@ -7276,6 +7681,11 @@
       "subscriptions_url": "https://api.github.com/users/d4l3k/subscriptions",
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
+    },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
     },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/npm-lodash/pulls{/number}",
@@ -7366,6 +7776,11 @@
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
     },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
+    },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/omniauth-secondlife/pulls{/number}",
     "pushed_at": "2012-06-02T03:16:50Z",
@@ -7454,6 +7869,11 @@
       "subscriptions_url": "https://api.github.com/users/d4l3k/subscriptions",
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
+    },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
     },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/opentetrisarena/pulls{/number}",
@@ -7544,6 +7964,11 @@
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
     },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
+    },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/piazza-api/pulls{/number}",
     "pushed_at": "2017-01-09T21:00:00Z",
@@ -7632,6 +8057,11 @@
       "subscriptions_url": "https://api.github.com/users/d4l3k/subscriptions",
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
+    },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
     },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/platform-frameworks-native/pulls{/number}",
@@ -7722,6 +8152,11 @@
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
     },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
+    },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/pPub/pulls{/number}",
     "pushed_at": "2012-11-24T01:01:48Z",
@@ -7810,6 +8245,11 @@
       "subscriptions_url": "https://api.github.com/users/d4l3k/subscriptions",
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
+    },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
     },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/predictive-personal-model/pulls{/number}",
@@ -7900,6 +8340,11 @@
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
     },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
+    },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/protobuf/pulls{/number}",
     "pushed_at": "2016-05-26T20:57:55Z",
@@ -7988,6 +8433,11 @@
       "subscriptions_url": "https://api.github.com/users/d4l3k/subscriptions",
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
+    },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
     },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/protobuf-1/pulls{/number}",
@@ -8078,6 +8528,11 @@
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
     },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
+    },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/quic/pulls{/number}",
     "pushed_at": "2015-04-22T06:53:34Z",
@@ -8166,6 +8621,11 @@
       "subscriptions_url": "https://api.github.com/users/d4l3k/subscriptions",
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
+    },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
     },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/RedditIsAGame/pulls{/number}",
@@ -8256,6 +8716,11 @@
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
     },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
+    },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/RedditKit.rb/pulls{/number}",
     "pushed_at": "2014-01-04T07:13:07Z",
@@ -8344,6 +8809,11 @@
       "subscriptions_url": "https://api.github.com/users/d4l3k/subscriptions",
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
+    },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
     },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/resume/pulls{/number}",
@@ -8434,6 +8904,11 @@
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
     },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
+    },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/RTerraria/pulls{/number}",
     "pushed_at": "2012-07-05T01:54:05Z",
@@ -8522,6 +8997,11 @@
       "subscriptions_url": "https://api.github.com/users/d4l3k/subscriptions",
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
+    },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
     },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/ruby-guerrillamail/pulls{/number}",
@@ -8612,6 +9092,11 @@
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
     },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
+    },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/ruby-touch/pulls{/number}",
     "pushed_at": "2013-08-20T15:11:59Z",
@@ -8700,6 +9185,11 @@
       "subscriptions_url": "https://api.github.com/users/d4l3k/subscriptions",
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
+    },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
     },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/Ruby2LSL/pulls{/number}",
@@ -8790,6 +9280,11 @@
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
     },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
+    },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/RubyBukkit/pulls{/number}",
     "pushed_at": "2012-01-19T03:50:45Z",
@@ -8878,6 +9373,11 @@
       "subscriptions_url": "https://api.github.com/users/d4l3k/subscriptions",
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
+    },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
     },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/RubyLink/pulls{/number}",
@@ -8968,6 +9468,11 @@
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
     },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
+    },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/sandbox/pulls{/number}",
     "pushed_at": "2010-09-16T21:31:33Z",
@@ -9056,6 +9561,11 @@
       "subscriptions_url": "https://api.github.com/users/d4l3k/subscriptions",
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
+    },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
     },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/ServerInitProxy/pulls{/number}",
@@ -9146,6 +9656,11 @@
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
     },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
+    },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/sh/pulls{/number}",
     "pushed_at": "2016-11-14T02:40:27Z",
@@ -9234,6 +9749,11 @@
       "subscriptions_url": "https://api.github.com/users/d4l3k/subscriptions",
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
+    },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
     },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/sinatra-asset-pipeline/pulls{/number}",
@@ -9324,6 +9844,11 @@
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
     },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
+    },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/skeletondb/pulls{/number}",
     "pushed_at": "2016-12-13T22:33:29Z",
@@ -9412,6 +9937,11 @@
       "subscriptions_url": "https://api.github.com/users/d4l3k/subscriptions",
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
+    },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
     },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/sketchy-url-shortener/pulls{/number}",
@@ -9502,6 +10032,11 @@
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
     },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
+    },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/sky-tumblr-export/pulls{/number}",
     "pushed_at": "2015-10-13T17:53:15Z",
@@ -9590,6 +10125,11 @@
       "subscriptions_url": "https://api.github.com/users/d4l3k/subscriptions",
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
+    },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
     },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/SL-RubyScript/pulls{/number}",
@@ -9680,6 +10220,11 @@
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
     },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
+    },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/slack-mentorship/pulls{/number}",
     "pushed_at": "2016-02-25T19:56:40Z",
@@ -9768,6 +10313,11 @@
       "subscriptions_url": "https://api.github.com/users/d4l3k/subscriptions",
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
+    },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
     },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/spinal/pulls{/number}",
@@ -9858,6 +10408,11 @@
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
     },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
+    },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/SpoutPlugin/pulls{/number}",
     "pushed_at": "2012-01-18T02:11:45Z",
@@ -9946,6 +10501,11 @@
       "subscriptions_url": "https://api.github.com/users/d4l3k/subscriptions",
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
+    },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
     },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/square-invoice-tickets/pulls{/number}",
@@ -10036,6 +10596,11 @@
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
     },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
+    },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/square-invoice-tickets-checker/pulls{/number}",
     "pushed_at": "2016-03-16T21:35:17Z",
@@ -10124,6 +10689,11 @@
       "subscriptions_url": "https://api.github.com/users/d4l3k/subscriptions",
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
+    },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
     },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/starry/pulls{/number}",
@@ -10214,6 +10784,11 @@
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
     },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
+    },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/startupstorm.github.io/pulls{/number}",
     "pushed_at": "2015-11-03T23:13:15Z",
@@ -10302,6 +10877,11 @@
       "subscriptions_url": "https://api.github.com/users/d4l3k/subscriptions",
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
+    },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
     },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/talib/pulls{/number}",
@@ -10392,6 +10972,11 @@
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
     },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
+    },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/ThePumaPress/pulls{/number}",
     "pushed_at": "2013-09-22T22:14:13Z",
@@ -10480,6 +11065,11 @@
       "subscriptions_url": "https://api.github.com/users/d4l3k/subscriptions",
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
+    },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
     },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/Toxin/pulls{/number}",
@@ -10570,6 +11160,11 @@
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
     },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
+    },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/turtle/pulls{/number}",
     "pushed_at": "2015-11-13T07:51:11Z",
@@ -10658,6 +11253,11 @@
       "subscriptions_url": "https://api.github.com/users/d4l3k/subscriptions",
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
+    },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
     },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/ubc-course/pulls{/number}",
@@ -10748,6 +11348,11 @@
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
     },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
+    },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/ubc-food-safety/pulls{/number}",
     "pushed_at": "2017-04-22T03:20:05Z",
@@ -10836,6 +11441,11 @@
       "subscriptions_url": "https://api.github.com/users/d4l3k/subscriptions",
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
+    },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
     },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/ubcampus/pulls{/number}",
@@ -10926,6 +11536,11 @@
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
     },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
+    },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/upass/pulls{/number}",
     "pushed_at": "2016-09-30T22:55:57Z",
@@ -11014,6 +11629,11 @@
       "subscriptions_url": "https://api.github.com/users/d4l3k/subscriptions",
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
+    },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
     },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/web-comic-enchancments/pulls{/number}",
@@ -11104,6 +11724,11 @@
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
     },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
+    },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/webpg-chrome/pulls{/number}",
     "pushed_at": "2014-06-13T17:51:04Z",
@@ -11192,6 +11817,11 @@
       "subscriptions_url": "https://api.github.com/users/d4l3k/subscriptions",
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
+    },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
     },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/webrtc-lobby/pulls{/number}",
@@ -11282,6 +11912,11 @@
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
     },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
+    },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/webrtc-lobby-elements/pulls{/number}",
     "pushed_at": "2016-05-01T09:51:17Z",
@@ -11370,6 +12005,11 @@
       "subscriptions_url": "https://api.github.com/users/d4l3k/subscriptions",
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
+    },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
     },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/WebSync/pulls{/number}",
@@ -11460,6 +12100,11 @@
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
     },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
+    },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/wire-desktop/pulls{/number}",
     "pushed_at": "2016-08-04T11:31:06Z",
@@ -11548,6 +12193,11 @@
       "subscriptions_url": "https://api.github.com/users/d4l3k/subscriptions",
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
+    },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
     },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/wire-webapp/pulls{/number}",
@@ -11638,6 +12288,11 @@
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
     },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
+    },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/www.tor2web.org/pulls{/number}",
     "pushed_at": "2015-09-11T20:24:09Z",
@@ -11726,6 +12381,11 @@
       "subscriptions_url": "https://api.github.com/users/d4l3k/subscriptions",
       "type": "User",
       "url": "https://api.github.com/users/d4l3k"
+    },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
     },
     "private": false,
     "pulls_url": "https://api.github.com/repos/d4l3k/xkcd-slides/pulls{/number}",
@@ -11816,6 +12476,11 @@
       "type": "Organization",
       "url": "https://api.github.com/users/degdb"
     },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
+    },
     "private": false,
     "pulls_url": "https://api.github.com/repos/degdb/degdb/pulls{/number}",
     "pushed_at": "2016-01-23T00:15:27Z",
@@ -11904,6 +12569,11 @@
       "subscriptions_url": "https://api.github.com/users/KosherBacon/subscriptions",
       "type": "User",
       "url": "https://api.github.com/users/KosherBacon"
+    },
+    "permissions": {
+      "admin": false,
+      "pull": true,
+      "push": true
     },
     "private": false,
     "pulls_url": "https://api.github.com/repos/KosherBacon/JavaBitcoinTrader/pulls{/number}",
@@ -11994,6 +12664,11 @@
       "type": "Organization",
       "url": "https://api.github.com/users/nwhacks"
     },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
+    },
     "private": false,
     "pulls_url": "https://api.github.com/repos/nwhacks/nwhacks2017_static/pulls{/number}",
     "pushed_at": "2017-03-19T23:56:17Z",
@@ -12082,6 +12757,11 @@
       "subscriptions_url": "https://api.github.com/users/nwhacks2015/subscriptions",
       "type": "Organization",
       "url": "https://api.github.com/users/nwhacks2015"
+    },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
     },
     "private": false,
     "pulls_url": "https://api.github.com/repos/nwhacks2015/nwhacks2015.github.io/pulls{/number}",
@@ -12172,6 +12852,11 @@
       "type": "Organization",
       "url": "https://api.github.com/users/startupstorm"
     },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
+    },
     "private": false,
     "pulls_url": "https://api.github.com/repos/startupstorm/startupstorm.github.io/pulls{/number}",
     "pushed_at": "2016-11-28T00:47:32Z",
@@ -12260,6 +12945,11 @@
       "subscriptions_url": "https://api.github.com/users/UBC-CS310-2015w2/subscriptions",
       "type": "Organization",
       "url": "https://api.github.com/users/UBC-CS310-2015w2"
+    },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
     },
     "private": false,
     "pulls_url": "https://api.github.com/repos/UBC-CS310-2015w2/Waffles/pulls{/number}",
@@ -12350,6 +13040,11 @@
       "type": "Organization",
       "url": "https://api.github.com/users/ubccsss"
     },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
+    },
     "private": false,
     "pulls_url": "https://api.github.com/repos/ubccsss/exams/pulls{/number}",
     "pushed_at": "2017-03-09T05:37:09Z",
@@ -12438,6 +13133,11 @@
       "subscriptions_url": "https://api.github.com/users/UniversityPrep/subscriptions",
       "type": "Organization",
       "url": "https://api.github.com/users/UniversityPrep"
+    },
+    "permissions": {
+      "admin": true,
+      "pull": true,
+      "push": true
     },
     "private": false,
     "pulls_url": "https://api.github.com/repos/UniversityPrep/SportsApp/pulls{/number}",
