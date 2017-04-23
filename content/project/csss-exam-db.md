@@ -56,8 +56,6 @@ Here's some screenshots for your viewing.
 ### Unclassified Files
 
 {{< amp-img src="/images/examdb/examdb-unclassified.png" />}}
-All the automatically classified files. [View](https://exams.ubccsss.org/cs121/)
-{{< /amp-img />}}
 
 ### Upload Form
 
