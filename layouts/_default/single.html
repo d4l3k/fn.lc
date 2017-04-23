@@ -8,8 +8,9 @@
         content="{{ absURL (default .Site.Params.authorimage (index .Params "image")) }}"/>
   <h2 id="title" itemprop="headline">{{ .Title }}</h2>
   <div class="post-meta">
-    <time itemprop="datePublished">{{ .Date.Format "Mon Jan 2, 2006" }}</time>
-    - {{ .ReadingTime }} Minutes - {{ .FuzzyWordCount }} Words
+    <span><time itemprop="datePublished">{{ .Date.Format "Mon Jan 2, 2006" }}</time></span>
+    <span>{{ .ReadingTime }} Minutes</span>
+    <span>{{ .FuzzyWordCount }} Words</span>
   </div>
   <article id="content" itemprop="articleBody">
     {{ .Content }}
