@@ -8,7 +8,7 @@
   <meta itemprop="publisher" content="Tristan Rice"/>
   <meta itemprop="image"
         content="{{ absURL (default .Site.Params.authorimage (index .Params "image")) }}"/>
-  <h2 id="title"><a href="{{.Permalink}}" itemprop="headline">{{ .Title }}</a></h2>
+  <h2 id="title" itemprop="headline">{{ .Title }}</h2>
 
   <div class="post-meta">
     {{ partial "github.html" . }}

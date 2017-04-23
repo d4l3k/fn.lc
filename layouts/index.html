@@ -55,9 +55,9 @@
   </div>
 
   <a class="center" href="/project/">
-    View All
+    View all
     {{ len (where .Data.Pages "Section" "project") }}
-    Featured Projects
+    featured projects
   </a>
 
   <a class="center" href="https://github.com/d4l3k">
@@ -73,7 +73,7 @@
         {{ .Render "summary" }}
     {{ end }}
   </div>
-  <a class="center" href="/post/">View All {{ len (where .Data.Pages "Section" "post") }} Posts</a>
+  <a class="center" href="/post/">View all {{ len (where .Data.Pages "Section" "post") }} posts</a>
 </section>
 
 {{ partial "footer.html" . }}

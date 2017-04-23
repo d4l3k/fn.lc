@@ -1,5 +1,6 @@
 .PHONY: build
 build: github
+	hugo
 
 
 .PHONY: github
