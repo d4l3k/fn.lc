@@ -2,17 +2,16 @@
 date: 2017-03-09T05:37:09Z
 github: ubccsss/exams
 icon: database
+image: /images/examdb/examdb-home.png
 site: https://exams.ubccsss.org
 stars: 0
+tags:
+- ubc
+- csss
+- go
 title: CSSS Exam Database
 weight: 1
-image: /images/examdb/examdb-home.png
-tags:
-  - ubc
-  - csss
-  - go
 ---
-
 As the webmaster and VP Communications for the [Computer Science Student
 Society](https://ubccsss.org/) I spent a lot of time updating the site this past
 year. I designed a web app from the ground up to replace the [old
@@ -59,4 +58,4 @@ Here's some screenshots for your viewing.
 
 ### Upload Form
 
-{{< amp-img src="/images/examdb/examdb-upload.png" />}}
+{{< amp-img src="/images/examdb/examdb-upload.png" />}}g" />}}
