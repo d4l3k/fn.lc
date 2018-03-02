@@ -1,16 +1,16 @@
 ---
-date: 2017-03-09T05:37:09Z
+date: 2017-12-08T22:10:53Z
 github: ubccsss/exams
 icon: database
 image: /images/examdb/examdb-home.png
 site: https://exams.ubccsss.org
-stars: 0
+stars: 1
 tags:
 - ubc
 - csss
 - go
 title: CSSS Exam Database
-weight: 1
+weight: 2
 ---
 As the webmaster and VP Communications for the [Computer Science Student
 Society](https://ubccsss.org/) I spent a lot of time updating the site this past

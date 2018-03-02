@@ -1,8 +1,8 @@
 ---
-date: 2016-12-25T21:39:57Z
+date: 2017-10-01T20:52:54Z
 github: d4l3k/go-pry
 icon: terminal
-stars: 287
+stars: 2041
 title: go-pry
-weight: 288
+weight: 2042
 ---

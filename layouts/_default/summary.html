@@ -1,7 +1,7 @@
 <article class="post">
     <header>
         <h3>
-            <a href="{{ .Permalink }}">{{ .Title }}</a>
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
             {{ if .Draft }}
             <span class="draft">DRAFT</span>
             {{end}}
@@ -18,6 +18,6 @@
     </p>
 
     <footer>
-        <a class="right" href='{{ .Permalink }}'><nobr>Read more →</nobr></a>
+        <a class="right" href='{{ .RelPermalink }}'><nobr>Read more →</nobr></a>
     </footer>
 </article>

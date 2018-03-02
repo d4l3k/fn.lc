@@ -123,6 +123,20 @@
       body > header > h1 {
         margin-bottom: 10px;
       }
+      #ipfs {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      #ipfs amp-img {
+        opacity: 0.2;
+        margin: 5px;
+        width: 40px;
+        transition: opacity 0.5s;
+      }
+      #ipfs amp-img:hover {
+        opacity: 1;
+      }
 
       {{ if .IsHome }}
       amp-img.circle {
@@ -267,6 +281,11 @@
     </style>
   </head id>
   <body id>
+    <div id="ipfs">
+      <a href="https://fn.lc/ipns/Qmea45XwFtdwaCGAPLRMxFmoUP5YLnknc2WGCGQ3HnDP6f{{.URL}}">
+        <amp-img height="40" width="40" layout="fixed" src="/ipfs-logo-vector-ice-text.svg">
+      </a>
+    </div>
     <header>
       <h1><a href="/">Tristan Rice</a></h1>
       <div>Software Engineer and Student</div>

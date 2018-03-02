@@ -1,7 +1,7 @@
 .PHONY: build
 build: github
 	hugo
-
+	./util/publish.sh
 
 .PHONY: github
 github:
