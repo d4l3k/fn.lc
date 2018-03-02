@@ -3,6 +3,7 @@ title: "Tristan Rice"
 languageCode: "en-us"
 params:
   authorimage: "https://avatars1.githubusercontent.com/u/909104?v=3&s=360"
+relativeURLs: true
 
 MetaDataFormat: "yaml"
 PygmentsCodeFences: true
