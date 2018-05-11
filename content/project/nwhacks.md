@@ -1,5 +1,5 @@
 ---
-date: 2017-11-29T01:29:53Z
+date: "2017-11-29T01:29:53Z"
 github: nwhacks/nwhacks2017_static
 icon: laptop
 site: https://www.nwhacks.io

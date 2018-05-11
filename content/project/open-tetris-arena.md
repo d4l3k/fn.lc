@@ -1,9 +1,9 @@
 ---
-date: 2017-02-08T06:21:15Z
+date: "2018-03-24T00:35:53Z"
 github: d4l3k/opentetrisarena
 icon: gamepad
 site: https://opentetrisarena.fn.lc
-stars: 0
+stars: 2
 title: Open Tetris Arena
-weight: 1
+weight: 3
 ---

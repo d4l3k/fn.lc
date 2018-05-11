@@ -1,8 +1,8 @@
 ---
-date: 2016-01-23T00:15:27Z
+date: "2016-01-23T00:15:27Z"
 github: degdb/degdb
 icon: share-alt
-stars: 185
+stars: 184
 title: degdb
-weight: 186
+weight: 185
 ---

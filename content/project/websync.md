@@ -1,9 +1,9 @@
 ---
-date: 2015-11-17T05:30:42Z
+date: "2018-04-03T23:58:10Z"
 github: d4l3k/websync
 icon: file-o
 site: https://websyn.ca
-stars: 293
+stars: 292
 title: WebSyn.ca
-weight: 294
+weight: 293
 ---
