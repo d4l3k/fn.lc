@@ -1,5 +1,5 @@
 ---
-date: "2016-07-09T18:53:30Z"
+date: "2018-09-12T21:28:50Z"
 github: d4l3k/ficrecommend
 icon: book
 site: https://fn.lc/ficrecommend/

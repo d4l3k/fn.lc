@@ -1,6 +1,6 @@
 ---
 date: "2017-11-29T01:29:53Z"
-github: nwhacks/nwhacks2017_static
+github: nwplus/nwhacks2017_static
 icon: laptop
 site: https://www.nwhacks.io
 stars: 1
