@@ -31,15 +31,15 @@
       <p id="categories">
         Categories:
         {{ range .Params.topics }}
-          <a href="{{ $baseurl }}/topics/{{ . | urlize }}/">{{ . }}</a>
+          <a href="/topics/{{ . | urlize }}/">{{ . }}</a>
         {{ end }}
       </p>
     {{ end }}
     {{ if .Params.tags }}
       <p id="tags">
-				Tags:
+      Tags:
         {{ range .Params.tags }}
-          <a href="{{ $baseurl }}/tags/{{ . | urlize }}/">{{ . }}</a>
+          <a href="/tags/{{ . | urlize }}/">{{ . }}</a>
         {{ end }}
       </p>
     {{ end }}
