@@ -1,13 +1,12 @@
 ---
 title: "Dropbike: Data Breaches and Free Bike Rides"
-date: 2018-09-18T23:13:45-07:00
+date: 2018-09-17T16:24:45-07:00
 image: /images/dropbike/dropbike.jpg
 tags:
   - dropbike
   - security
   - react
   - android
-draft: true
 ---
 
 *Note: These issues were responsible disclosed and have since been fixed. This
@@ -424,6 +423,12 @@ I submit the full details via the bug reporting form.
 
 The API key was revoked shortly after. I checked it several hours later and
 it no longer worked.
+
+### Wed, Sep 19, 2018 at 2:00 PM
+
+I went out to check if the bike unlocking still worked, seems to be fixed. It
+threw some weird errors and hid the bikes from the map, but it didn't unlock
+them anymore.
 
 
 ## Recommendations
