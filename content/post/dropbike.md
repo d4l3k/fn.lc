@@ -1,6 +1,12 @@
 ---
 title: "Dropbike: Data Breaches and Free Bike Rides"
 date: 2018-09-18T23:13:45-07:00
+image: /images/dropbike/dropbike.jpg
+tags:
+  - dropbike
+  - security
+  - react
+  - android
 draft: true
 ---
 
@@ -17,6 +23,10 @@ seems like a neat convenient service and I was super excited to have them on
 campus.
 
 <!--more-->
+
+{{% amp-img src="/images/dropbike/dropbike.jpg" %}}
+A Dropbike in its natural habitat.
+{{% /amp-img %}}
 
 Unfortunately, the
 [app](https://play.google.com/store/apps/details?id=ca.dropbike) is pretty
