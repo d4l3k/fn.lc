@@ -1,6 +1,6 @@
 .PHONY: build
 build: github
-	hugo
+	hugo -D
 	./util/publish.sh
 
 .PHONY: github
