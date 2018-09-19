@@ -2,7 +2,7 @@
 
 <section id="main">
   <h2 id="title">{{ .Title }}</h2>
-  {{ range .Data.Pages }}
+  {{ range (where .Data.Pages "Draft" false) }}
   {{ .Render "summary"}}
   {{ end }}
 </section>

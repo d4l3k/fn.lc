@@ -41,7 +41,7 @@
   <h2>Top Projects</h2>
 
   <div>
-    {{ range first 3 (where .Data.Pages.ByWeight.Reverse "Section" "project") }}
+    {{ range first 3 (where (where .Data.Pages.ByWeight.Reverse "Section" "project") "Draft" false)}}
         {{ .Render "summary"}}
     {{ end }}
   </div>
@@ -49,7 +49,7 @@
   <h2>Latest Projects</h2>
 
   <div>
-    {{ range first 3 (where .Data.Pages.ByDate.Reverse "Section" "project") }}
+    {{ range first 3 (where (where .Data.Pages.ByDate.Reverse "Section" "project") "Draft" false) }}
         {{ .Render "summary"}}
     {{ end }}
   </div>
@@ -69,7 +69,7 @@
   <h2>Recent Posts</h2>
 
   <div>
-    {{ range first 3 (where .Data.Pages "Section" "post") }}
+    {{ range first 3 (where (where .Data.Pages "Section" "post") "Draft" false) }}
         {{ .Render "summary" }}
     {{ end }}
   </div>
