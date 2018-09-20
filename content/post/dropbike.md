@@ -9,6 +9,8 @@ tags:
   - android
 ---
 
+*Edit 2018-09-20T15:42-07:00: [Dropbike's response to these issues](https://www.dropmobility.com/press/2018/9/20/customer-service-data-vulnerability-intercom-fixed)*
+
 *Edit 2018-09-19T19:38-07:00: Updated support comments to more accurately
 reflect their response.*
 
