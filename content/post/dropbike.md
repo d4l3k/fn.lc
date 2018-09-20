@@ -1,5 +1,5 @@
 ---
-title: "Dropbike: Data Breaches and Free Bike Rides"
+title: "Cracking Dropbike: Data Breach and Free Bike Rides"
 date: 2018-09-19T16:24:45-07:00
 image: /images/dropbike/dropbike.jpg
 tags:
