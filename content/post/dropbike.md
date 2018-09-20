@@ -9,6 +9,9 @@ tags:
   - android
 ---
 
+*Edit 2018-09-19T19:38-07:00: Updated support comments to more accurately
+reflect their response.*
+
 *Note: These issues were responsible disclosed and have since been fixed. This
 is my understanding of the issues to the best of my knowledge.*
 
@@ -391,10 +394,17 @@ asking to put me in touch with someone from engineering.
 
 Sent a follow up message.
 
-Support told me there was no bug bounty program, but they forwarded my message
-to someone from engineering.
+Support:
 
-Support gave me a link to a "bug reporting" Google Form to report the issue.
+> Hey Tristan, thanks for reaching out to us about this. We really appreciate you telling us about this. We don't have a bug bounty scheme, but I've forwarded your feedback to our software team. Thanks again, Tristan.
+
+Me:
+
+> Okay great! They can reach out to me at rice@fn.lc for more details
+
+Support:
+
+> Thanks Tristan! We do have a bug reporting form which you could fill out with your concerns and comments: -omitted-
 
 **Form had incorrect permissions set on it so I couldn't access it.**
 
@@ -402,9 +412,9 @@ Support gave me a link to a "bug reporting" Google Form to report the issue.
 
 Notified them about the permission issue.
 
-Support fixes the permissions and responds with:
+Support:
 
-> **If we feel that this is something we should pursue** we will follow up with you if need be.
+> If you try to fill out the form now it should work Tristan. **If we feel that this is something we should pursue** we will follow up with you if need be. Thanks again, Tristan.
 
 ### Tue, Sep 18, 2018 at 05:27 PM
 
