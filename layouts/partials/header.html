@@ -13,6 +13,7 @@
 		<link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
 		{{ end }}
     <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto Mono|Roboto+Slab:300,400" rel="stylesheet">
+    <link rel="shortcut icon" href="/favicon.ico">
     {{if or .IsHome .Params.fontawesome (eq .Section "project")}}
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
     {{end}}
@@ -285,6 +286,9 @@
   </head id>
   <body id>
     <div id="ipfs">
+      <a href="https://amp.cloudflare.com/c/s/fn.lc{{.URL}}">
+        <amp-img height="40" width="40" layout="fixed" src="/images/amp.svg">
+      </a>
       <a href="https://fn.lc/ipns/Qmea45XwFtdwaCGAPLRMxFmoUP5YLnknc2WGCGQ3HnDP6f{{.URL}}">
         <amp-img height="40" width="40" layout="fixed" src="/ipfs-logo-vector-ice-text.svg">
       </a>
