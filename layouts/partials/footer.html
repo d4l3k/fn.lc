@@ -12,9 +12,12 @@
     "account": "UA-52169625-1"
   },
   "triggers": {
-    "trackPageview": {
+    "trackPageviewWithCustomUrl": {
       "on": "visible",
-      "request": "pageview"
+      "request": "pageview",
+      "vars": {
+        "documentLocation": "{{ .Permalink }}"
+      }
     }
   }
 }
