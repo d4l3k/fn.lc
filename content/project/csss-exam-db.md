@@ -1,16 +1,16 @@
 ---
-date: "2017-12-08T22:10:53Z"
+date: "2019-12-10T23:57:55Z"
 github: ubccsss/exams
 icon: database
 image: /images/examdb/examdb-home.png
 site: https://exams.ubccsss.org
-stars: 1
+stars: 4
 tags:
 - ubc
 - csss
 - go
 title: CSSS Exam Database
-weight: 2
+weight: 5
 ---
 As the webmaster and VP Communications for the [Computer Science Student
 Society](https://ubccsss.org/) I spent a lot of time updating the site this past
