@@ -1,3 +1,5 @@
+{{ $_hugo_config := `{ "version": 1 }` }}
+
 {{ $src := .Get "src" }}
 {{ $path := printf "/static/%s" $src }}
 {{ $config := imageConfig $path }}

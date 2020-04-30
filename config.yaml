@@ -10,3 +10,5 @@ PygmentsCodeFences: true
 PygmentsUseClasses: true
 PygmentsOptions: lineanchors=line
 ResetState: true
+markup.goldmark.renderer:
+  unsafe: true

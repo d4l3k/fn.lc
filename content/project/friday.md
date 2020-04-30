@@ -7,3 +7,7 @@ title: State of the Art /s - Detecting My Dog Shitting with PyTorch, Transfer Le
   and EdgeTPU
 weight: 1
 ---
+
+{{% amp-img src="/images/friday/IMG_20200404_135129.jpg" %}}
+Friday out for a walk.
+{{% /amp-img %}}
