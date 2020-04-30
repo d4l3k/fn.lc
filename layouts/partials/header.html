@@ -8,10 +8,12 @@
     {{end}}
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <link rel="canonical" href="{{ .Permalink }}">
-		{{ if .RSSLink }}
-		<link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
-		<link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
-		{{ end }}
+              {{ with .OutputFormats.Get "RSS" }}
+		<link href="{{ .RelPermalink }}" rel="alternate"
+                type="application/rss+xml" title="{{ $.Site.Title }}" />
+		<link href="{{ .RelPermalink }}" rel="feed"
+                type="application/rss+xml" title="{{ $.Site.Title }}" />
+              {{ end }}
     <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto Mono|Roboto+Slab:300,400" rel="stylesheet">
     <link rel="shortcut icon" href="/favicon.ico">
     {{if or .IsHome .Params.fontawesome (eq .Section "project")}}
@@ -298,5 +300,5 @@
     </div>
     <header>
       <h1><a href="/">Tristan Rice</a></h1>
-      <div>Software Engineer and Student</div>
+      <div>Software Engineer - ML Infra</div>
     </header>

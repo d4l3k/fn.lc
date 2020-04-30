@@ -5,7 +5,7 @@
   <amp-img class="circle" height="180" layout="fixed" width="180"
            src="{{.Site.Params.authorimage}}"></amp-img>
   <p>
-  I'm Tristan Rice; Software Engineer and student at the University of British Columbia.
+  I'm Tristan Rice; Software Engineer and ML Infra specialist.
   </p>
   <blockquote>
     <table>
@@ -41,24 +41,29 @@
   <h2>Top Projects</h2>
 
   <div>
-    {{ range first 3 (where (where .Data.Pages.ByWeight.Reverse "Section" "project") "Draft" false)}}
+    {{ range (where .Pages "Section" "project")}}
+      {{ range first 3 .Pages.ByWeight.Reverse}}
         {{ .Render "summary"}}
+      {{ end }}
     {{ end }}
   </div>
 
   <h2>Latest Projects</h2>
 
-  <div>
-    {{ range first 3 (where (where .Data.Pages.ByDate.Reverse "Section" "project") "Draft" false) }}
+  {{ range (where .Pages "Section" "project")}}
+    <div>
+      {{ range first 3 .Pages.ByDate.Reverse}}
         {{ .Render "summary"}}
-    {{ end }}
-  </div>
+      {{ end }}
+    </div>
 
-  <a class="center" href="/project/">
-    View all
-    {{ len (where .Data.Pages "Section" "project") }}
-    featured projects
-  </a>
+    <a class="center" href="/project/">
+      View all
+      {{ len .Pages }}
+      featured projects
+    </a>
+  {{ end }}
+
 
   <a class="center" href="https://github.com/d4l3k">
     See all {{ len .Site.Data.github }} projects on GitHub
@@ -68,12 +73,15 @@
 <section id="main">
   <h2>Recent Posts</h2>
 
-  <div>
-    {{ range first 3 (where (where .Data.Pages "Section" "post") "Draft" false) }}
+  {{ range (where .Data.Pages "Section" "post") }}
+    <div>
+      {{ range first 3 .Pages.ByDate.Reverse}}
         {{ .Render "summary" }}
-    {{ end }}
-  </div>
-  <a class="center" href="/post/">View all {{ len (where .Data.Pages "Section" "post") }} posts</a>
+      {{ end }}
+    </div>
+
+    <a class="center" href="/post/">View all {{ len .Pages }} posts</a>
+  {{ end }}
 </section>
 
 {{ partial "footer.html" . }}
