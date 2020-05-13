@@ -6,6 +6,7 @@ stars: 0
 title: State of the Art /s - Detecting My Dog Shitting with PyTorch, Transfer Learning
   and EdgeTPU
 weight: 1
+draft: true
 ---
 
 {{% amp-img src="/images/friday/IMG_20200404_135129.jpg" %}}
