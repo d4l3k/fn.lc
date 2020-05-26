@@ -1,7 +1,9 @@
 ---
-title: "Hacking at my Tesla Model 3 - Security Overview"
+title: "Hacking my Tesla Model 3 - Security Overview"
 date: 2020-05-12T23:12:03-07:00
 ---
+
+*See the follow up at [Hacking my Tesla Model 3 - Internal API](/post/tesla-model-3-services/).*
 
 I recently got a Tesla Model 3 and since I'm a huge nerd I've been spending a
 lot of time poking at the systems and trying to reverse engineer/figure out how
