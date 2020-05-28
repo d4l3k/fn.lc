@@ -3,7 +3,7 @@ date: "2018-04-03T23:58:10Z"
 github: d4l3k/websync
 icon: file-o
 site: https://websyn.ca
-stars: 296
+stars: 295
 title: WebSyn.ca
-weight: 297
+weight: 296
 ---
