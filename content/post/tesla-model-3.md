@@ -77,7 +77,7 @@ switch. These include:
 * Tuner - this is for the AM/FM radio. Not present on the newer Model 3 cars
   including mine. Not having an AM/FM radio does seem like a safety issue so I
   was surprised to see it was removed.
-  * 192.168.90.60
+  * 192.168.90.30
 
 ## seceth - Secure Ethernet TCAM
 
