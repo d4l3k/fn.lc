@@ -1,13 +1,19 @@
 {{ $_hugo_config := `{ "version": 1 }` }}
 
 {{ $src := .Get "src" }}
-{{ $path := printf "/static/%s" $src }}
-{{ $config := imageConfig $path }}
+{{ $height := .Get "height" }}
+{{ $width := .Get "width" }}
+{{if not $height}}
+  {{ $path := printf "/static/%s" $src }}
+  {{ $config := imageConfig $path }}
+  {{ $height = $config.Height }}
+  {{ $width = $config.Width }}
+{{end}}
 
 <a href="{{ $src }}">
 <amp-img src="{{$src}}"
-           height="{{$config.Height}}"
-           width="{{$config.Width}}"
+           height="{{$height}}"
+           width="{{$width}}"
            layout="responsive">
 </amp-img>
 </a>
