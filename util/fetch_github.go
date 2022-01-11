@@ -86,6 +86,7 @@ outer:
 			details, ok := final[github.(string)]
 			if !ok {
 				log.Printf("can't find github repo %q", github)
+				continue
 			}
 			front["date"] = details["pushed_at"].(string)
 			front["stars"] = details["stargazers_count"].(float64)
