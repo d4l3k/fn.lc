@@ -268,4 +268,7 @@ I’m planning on polishing this code up and sharing it on GitHub. I’d love to
 
 I’m also planning on doing more improvement to clean up the point clouds more so I can improve the model accuracy. The depth model I’m using can’t handle dynamic objects so something like [https://arxiv.org/abs/2110.08192](https://arxiv.org/abs/2110.08192) or [https://arxiv.org/abs/2107.07596](https://arxiv.org/abs/2107.07596) may work better for this situation.
 
+A small 3d labelling tool would also be really useful for extending this work to
+support other birdseye view models such as road lines.
+
 Thanks for reading this far! Happy to answer any questions or comments :)
