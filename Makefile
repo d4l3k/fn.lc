@@ -5,7 +5,7 @@ build: github metadata
 
 .PHONY: metadata
 metadata:
-	bash -c "exiv2 rm **/*.{jpg,png}"
+	bash -c "exiv2 rm **/*.{jpg,jpeg,png}"
 
 .PHONY: github
 github:
