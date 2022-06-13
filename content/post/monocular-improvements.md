@@ -1,5 +1,5 @@
 ---
-title: "DIY Self Driving Part 2: Monocular Improvements"
+title: "Monocular Depth Improvements - DIY Self Driving Part 2"
 date: 2022-06-12T14:20:04-07:00
 ---
 
