@@ -16,7 +16,7 @@ made to the monocular models was adding a 3D geometric constraint to enforce
 that the model didn't predict depths below the ground.
 
 Having a prior on the height of the ground cleared up most of the degenerate
-cases which resulted in infinite depth predictions for things reflective
+cases which resulted in infinite depth predictions for things like reflective
 puddles, blurry road surfaces and water on the camera.
 
 ### Problems with Image Space Depth
