@@ -159,6 +159,12 @@ take the max/min for each detection to generate an image space bounding box. Max
 and min generally aren't differentiable but since we just care about getting the
 outline to match it's sufficient for training purposes.
 
+
+{{% amp-img src="/3d-detr/box-points.png" %}}
+Bounding boxes rendered as points with different positions and fields of view.
+Left: main. Right: fisheye.
+{{% /amp-img %}}
+
 Here's the code to convert outputs into image space boxes for a particular
 camera.
 
