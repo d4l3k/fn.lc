@@ -37,6 +37,21 @@
   </blockquote>
 </section>
 
+<section id="main">
+  <h2>Recent Posts</h2>
+
+  {{ range (where .Data.Pages "Section" "post") }}
+    <div>
+      {{ range first 3 .Pages.ByDate.Reverse}}
+        {{ .Render "summary" }}
+      {{ end }}
+    </div>
+
+    <a class="center" href="/post/">View all {{ len .Pages }} posts</a>
+  {{ end }}
+</section>
+
+
 <section>
   <h2>Top Projects</h2>
 
@@ -68,20 +83,6 @@
   <a class="center" href="https://github.com/d4l3k">
     See all {{ len .Site.Data.github }} projects on GitHub
   </a>
-</section>
-
-<section id="main">
-  <h2>Recent Posts</h2>
-
-  {{ range (where .Data.Pages "Section" "post") }}
-    <div>
-      {{ range first 3 .Pages.ByDate.Reverse}}
-        {{ .Render "summary" }}
-      {{ end }}
-    </div>
-
-    <a class="center" href="/post/">View all {{ len .Pages }} posts</a>
-  {{ end }}
 </section>
 
 {{ partial "footer.html" . }}
