@@ -161,6 +161,20 @@
       .projects i.fa {
         font-size: 40px;
       }
+      .projects-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 32px;
+      }
+      .projects-grid i.summary-icon {
+        width: 60px;
+        margin-left: 0;
+      }
+      @media (max-width: 600px) {
+        .projects-grid {
+          grid-template-columns: 1fr;
+        }
+      }
       {{ end }}
 
       blockquote {

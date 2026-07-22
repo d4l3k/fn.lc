@@ -55,19 +55,9 @@
 <section>
   <h2>Top Projects</h2>
 
-  <div>
-    {{ range (where .Pages "Section" "project")}}
-      {{ range first 3 .Pages.ByWeight.Reverse}}
-        {{ .Render "summary"}}
-      {{ end }}
-    {{ end }}
-  </div>
-
-  <h2>Latest Projects</h2>
-
   {{ range (where .Pages "Section" "project")}}
-    <div>
-      {{ range first 3 .Pages.ByDate.Reverse}}
+    <div class="projects-grid">
+      {{ range first 6 .Pages.ByWeight.Reverse}}
         {{ .Render "summary"}}
       {{ end }}
     </div>
@@ -78,7 +68,6 @@
       featured projects
     </a>
   {{ end }}
-
 
   <a class="center" href="https://github.com/d4l3k">
     See all {{ len .Site.Data.github }} projects on GitHub
