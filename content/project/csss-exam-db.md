@@ -1,5 +1,5 @@
 ---
-date: "2019-12-10T23:57:55Z"
+date: '2019-12-10T23:57:55Z'
 github: ubccsss/exams
 icon: database
 image: /images/examdb/examdb-home.png

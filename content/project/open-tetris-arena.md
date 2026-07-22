@@ -1,5 +1,5 @@
 ---
-date: "2018-08-15T19:32:20Z"
+date: '2018-08-15T19:32:20Z'
 github: d4l3k/opentetrisarena
 icon: gamepad
 site: https://opentetrisarena.fn.lc

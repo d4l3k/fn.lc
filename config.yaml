@@ -6,9 +6,11 @@ params:
 relativeURLs: true
 
 MetaDataFormat: "yaml"
-PygmentsCodeFences: true
-PygmentsUseClasses: true
-PygmentsOptions: lineanchors=line
-ResetState: true
-markup.goldmark.renderer:
-  unsafe: true
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    codeFences: true
+    noClasses: false
+    lineAnchors: line

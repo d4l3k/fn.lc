@@ -1,8 +1,8 @@
 ---
-date: "2022-01-31T23:21:18Z"
+date: '2024-04-04T03:13:30Z'
 github: d4l3k/go-sct
 icon: sun-o
-stars: 123
+stars: 130
 title: go-sct
-weight: 124
+weight: 131
 ---

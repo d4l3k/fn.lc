@@ -1,9 +1,9 @@
 ---
-date: "2023-10-06T06:22:54Z"
+date: '2024-08-22T04:07:29Z'
 github: d4l3k/torchdrive
 icon: rocket
-stars: 69
+stars: 85
 title: torchdrive
-weight: 70
+weight: 86
 ---
 -
