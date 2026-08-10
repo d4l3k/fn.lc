@@ -40,3 +40,8 @@ No theme — all templates are in `layouts/`. Styles are inlined in
   `config.yaml`.
 - `relativeURLs: true` so the site works both at https://fn.lc/ and under
   the GitHub Pages project path.
+- When adapting the author's existing writing into a blog post, keep the result
+  as close to the source as possible. Preserve the original tone, wording, and
+  section structure, making only the edits needed for readability and the blog
+  format.
+- Do not use em dashes in new prose.
