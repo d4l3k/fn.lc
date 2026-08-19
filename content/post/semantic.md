@@ -47,15 +47,15 @@ We can use a pretrained model as an "auto-labeler". This second model is trained
 on BDD100K and we can run it on our dataset to generate ground truth labels for
 our model.
 
-{{% amp-img src="/semantic/main-semantic.png" %}}
+{{% img src="/semantic/main-semantic.png" %}}
 Main camera and the semantic segmentation output using UPerNet + ConvNeXt-T
 trained on BDD100K.
-{{% /amp-img %}}
+{{% /img %}}
 
-{{% amp-img src="/semantic/bdd100k-road.png" %}}
+{{% img src="/semantic/bdd100k-road.png" %}}
 Sample from BDD100K with predictions from my fine tuned YOLOP model predicting
 lane classes and drivable space probabilities.
-{{% /amp-img %}}
+{{% /img %}}
 
 I used a retrained [YOLOP](https://pytorch.org/hub/hustvl_yolop/) for the road surface
 segmentation
@@ -100,9 +100,9 @@ In this case I spent a couple of days labeling about 300 images. While 300
 images is much less than 100k we can do some tricks to weigh those examples more
 during training in order to make the model prioritize our examples.
 
-{{% amp-img src="/semantic/label-studio.png" %}}
+{{% img src="/semantic/label-studio.png" %}}
 Labeling road lines and curbs in Label Studio.
-{{% /amp-img %}}
+{{% /img %}}
 
 For the labeling software I used
 [Label Studio](https://github.com/heartexlabs/label-studio)
@@ -139,7 +139,7 @@ each of the various classes. We can do this by adding an extra head to our model
 decoder. Now we have two final layers, one to predict occupancy probabilities
 and one to predict the semantic classes for each voxel.
 
-{{% amp-img src="/semantic/voxel-semantic.png" %}}
+{{% img src="/semantic/voxel-semantic.png" %}}
 Example output from the model. In clock wise order from top left:
 main camera,
 losses on classes,
@@ -147,7 +147,7 @@ BEV occupancy, BEV semantic probabilities,
 argmax of target semantic classes, argmax of predicted classes.
 The ground and sky classes have been intentionally omitted so the argmax for
 those areas is noisy.
-{{% /amp-img %}}
+{{% /img %}}
 
 To convert this occupancy + semantic classes into an image that we can compare
 to the autolabeling model we use the same differentiable rendering technique
@@ -240,14 +240,14 @@ representation--a mesh. The mesh is built from a height map and a probability
 map for each X/Y location. This is then rendered using PyTorch3D back into image
 space to apply the SfM and semantic losses.
 
-{{% amp-img src="/semantic/mesh-semantic.png" %}}
+{{% img src="/semantic/mesh-semantic.png" %}}
 Example output from the model. In clock wise order from top left:
 main camera,
 predicted depth,
 BEV drivable space probabilities, BEV lane line probabilities,
 predicted lane lines and drivable space, the target lane lines and drivable
 space from autolabeling model.
-{{% /amp-img %}}
+{{% /img %}}
 
 Similar to the voxel model, the areas far from the camera that aren't directly seen by the cameras end
 up having random values since there's no constraints on them.
@@ -325,10 +325,10 @@ can cut down on the memory usage by pre-emptively computing the gradients by
 calling `.backward()` on each independent loss.
 
 
-{{% amp-img src="/semantic/autograd-pause.png" %}}
+{{% img src="/semantic/autograd-pause.png" %}}
 Proactively calling `.backward()` and pausing PyTorch autograd computation to
 save compute.
-{{% /amp-img %}}
+{{% /img %}}
 
 To avoid running the full backwards pass I came up with some handy helpers to
 make it easy to pause the graph and accumulate the gradient to an intermediate

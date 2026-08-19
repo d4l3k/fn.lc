@@ -61,60 +61,60 @@ Enabled by setting `GUI_tdsMode` to true.
 This enables the diagnostic app as well as shows the alerts from diagnostic
 mode. You can open and close the diagnostic app by pressing the Tesla logo.
 
-{{% amp-img src="/tesla-model-3-modes/tds-mode.png" %}}
+{{% img src="/tesla-model-3-modes/tds-mode.png" %}}
 The diagnostic app data viewer. This has stats from all the various car systems.
-{{% /amp-img %}}
+{{% /img %}}
 
-{{% amp-img src="/tesla-model-3-modes/tds-mode-das.png" %}}
+{{% img src="/tesla-model-3-modes/tds-mode-das.png" %}}
 Stats from the DAS.
-{{% /amp-img %}}
+{{% /img %}}
 
-{{% amp-img src="/tesla-model-3-modes/tds-mode-can.png" %}}
+{{% img src="/tesla-model-3-modes/tds-mode-can.png" %}}
 This screen shows stats from the CAN bus messages. You can interactively select
 which stats you want to be able to view.
-{{% /amp-img %}}
+{{% /img %}}
 
-{{% amp-img src="/tesla-model-3-modes/tds-mode-actions.png" %}}
+{{% img src="/tesla-model-3-modes/tds-mode-actions.png" %}}
 The various diagnostic actions.
-{{% /amp-img %}}
+{{% /img %}}
 
-{{% amp-img src="/tesla-model-3-modes/tds-mode-settings.png" %}}
+{{% img src="/tesla-model-3-modes/tds-mode-settings.png" %}}
 Some internal settings. Top speed and park assist are possibly from before speed
 limit mode and ultrasonic sensor parking assists were added to the standard UI.
-{{% /amp-img %}}
+{{% /img %}}
 
 
 #### Apps
 
-{{% amp-img src="/tesla-model-3-modes/tds-mode-apps.png" %}}
+{{% img src="/tesla-model-3-modes/tds-mode-apps.png" %}}
 All the apps in the car. The Diagnostic app is the currently open app.
-{{% /amp-img %}}
+{{% /img %}}
 
-{{% amp-img src="/tesla-model-3-modes/tds-mode-image-viewer.png" %}}
+{{% img src="/tesla-model-3-modes/tds-mode-image-viewer.png" %}}
 The image viewer. I don't have any images so doesn't show anything.
 It might be for viewing calibration images from the DAS?
-{{% /amp-img %}}
+{{% /img %}}
 
-{{% amp-img src="/tesla-model-3-modes/tds-mode-nav-test.png" %}}
+{{% img src="/tesla-model-3-modes/tds-mode-nav-test.png" %}}
 Nav Test seems to be for testing the map and navigation. It supports recording a
 GPS path and then replaying it. This app is completely hidden by default but can
 enabled by changing the app config file on disk.
-{{% /amp-img %}}
+{{% /img %}}
 
-{{% amp-img src="/tesla-model-3-modes/tds-mode-nvh.png" %}}
+{{% img src="/tesla-model-3-modes/tds-mode-nvh.png" %}}
 Noise, vibration and handling app. This seems to be for testing the car on
 rollers to see what sounds the car makes. It appears to be able to use the cars
 internal microphone to record what it sounds like inside the cabin.
-{{% /amp-img %}}
+{{% /img %}}
 
-{{% amp-img src="/tesla-model-3-modes/tds-mode-wifi.png" %}}
+{{% img src="/tesla-model-3-modes/tds-mode-wifi.png" %}}
 This seems to be for debugging the LTE connection, WIFI and radio (parrot).
-{{% /amp-img %}}
+{{% /img %}}
 
-{{% amp-img src="/tesla-model-3-modes/tds-mode-sketch-pad-2.png" %}}
+{{% img src="/tesla-model-3-modes/tds-mode-sketch-pad-2.png" %}}
 The car has both the old sketch pad and the new sketch pad even though only the
 new one is accessible by default.
-{{% /amp-img %}}
+{{% /img %}}
 
 ### Developer Mode
 
@@ -126,25 +126,25 @@ Pressing the Tesla logo throws an error in the
 console about trying to open the diagnostics app but it being disabled. Enabling
 `GUI_tdsMode` with `GUI_developerMode` shows some new tabs.
 
-{{% amp-img src="/tesla-model-3-modes/developer-mode-fonts.png" %}}
+{{% img src="/tesla-model-3-modes/developer-mode-fonts.png" %}}
 The new fonts tab in the diagnostic app. Appears to be just for testing the
 different font appearances.
-{{% /amp-img %}}
+{{% /img %}}
 
-{{% amp-img src="/tesla-model-3-modes/developer-mode-factory.png" %}}
+{{% img src="/tesla-model-3-modes/developer-mode-factory.png" %}}
 The new factory tab in the diagnostic app.
-{{% /amp-img %}}
+{{% /img %}}
 
 
-{{% amp-img src="/tesla-model-3-modes/developer-mode-trial-car.png" %}}
+{{% img src="/tesla-model-3-modes/developer-mode-trial-car.png" %}}
 Enabling Factory Mode and then turning on "Trial Car". Doesn't appear to do
 anything else to the UI. Presumably there's some corresponding changes to the
 drive systems.
-{{% /amp-img %}}
+{{% /img %}}
 
-{{% amp-img src="/tesla-model-3-modes/factory-mode-overrides.png" %}}
+{{% img src="/tesla-model-3-modes/factory-mode-overrides.png" %}}
 Enabling the factory mode overrides.
-{{% /amp-img %}}
+{{% /img %}}
 The factory mode overrides change `GUI_torqueLimitRequest` (default 63) and
 `GUI_powerLimitRequest` (default 31).
 
@@ -199,9 +199,9 @@ data from the games? I didn't dig too deep into it.
 
 Enabled by setting `GUI_factoryMode` to true.
 
-{{% amp-img src="/tesla-model-3-modes/factory-mode.png" %}}
+{{% img src="/tesla-model-3-modes/factory-mode.png" %}}
 Factory Mode by itself doesn't seem to add anything to the UI.
-{{% /amp-img %}}
+{{% /img %}}
 
 By itself it doesn't seem to do much. Enabling `GUI_tdsMode` and
 `GUI_developerMode` shows a new
@@ -212,30 +212,30 @@ By itself it doesn't seem to do much. Enabling `GUI_tdsMode` and
 
 Enabled by setting `GUI_serviceMode` to true.
 
-{{% amp-img src="/tesla-model-3-modes/service-mode.jpg" %}}
+{{% img src="/tesla-model-3-modes/service-mode.jpg" %}}
 The service mode tab. Override Service Limits removes the ~3 mph limit.
-{{% /amp-img %}}
+{{% /img %}}
 
 Service Mode is what Tesla Service centers and authorized body shops put your
 car into when it's being worked on. It adds a ~3 mph speed limit, disables
 remote access and disables the dash cams. It also allows for certain operations
 such as redeploying the firmware after replacing hardware.
 
-{{% amp-img src="/tesla-model-3-modes/service-mode-system-checks.jpg" %}}
+{{% img src="/tesla-model-3-modes/service-mode-system-checks.jpg" %}}
 The service mode tab. Override Service Limits removes the ~3 mph limit.
-{{% /amp-img %}}
+{{% /img %}}
 
-{{% amp-img src="/tesla-model-3-modes/service-mode-actions.jpg" %}}
+{{% img src="/tesla-model-3-modes/service-mode-actions.jpg" %}}
 The service mode tab. Override Service Limits removes the ~3 mph limit.
-{{% /amp-img %}}
+{{% /img %}}
 
 ### Transport Mode
 
 Enabled by setting `GUI_transportMode` to true.
 
-{{% amp-img src="/tesla-model-3-modes/transport-mode.png" %}}
+{{% img src="/tesla-model-3-modes/transport-mode.png" %}}
 Transport mode.
-{{% /amp-img %}}
+{{% /img %}}
 
 This mode is pretty minor. I believe it limits the speed the car can drive. It
 might also make the car sleep/conserve battery. There's no obvious UI changes.
@@ -254,9 +254,9 @@ long pressing the Tesla logo. Setting `GUI_dynotestMode` to true didn't seem to 
 
 This disables traction control for use with dyno testing.
 
-{{% amp-img src="/tesla-model-3-modes/dyno-mode.jpg" %}}
+{{% img src="/tesla-model-3-modes/dyno-mode.jpg" %}}
 Dyno mode.
-{{% /amp-img %}}
+{{% /img %}}
 
 ### Performance Demo Mode
 

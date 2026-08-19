@@ -143,9 +143,9 @@ You can display messages on the screen via:
 $ curl http://192.168.90.100:4070/display_message?message=owned
 ```
 
-{{% amp-img src="/images/tesla-model-3/model-3-owned.jpg" %}}
+{{% img src="/images/tesla-model-3/model-3-owned.jpg" %}}
 Displaying messages on the screen using the internal API. Version 2020.12.11.1
-{{% /amp-img %}}
+{{% /img %}}
 
 ### CarServer - :7654
 

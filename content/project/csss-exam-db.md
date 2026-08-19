@@ -46,16 +46,16 @@ Here's some screenshots for your viewing.
 
 ### Homepage
 
-{{< amp-img src="/images/examdb/examdb-home.png" />}}
+{{< img src="/images/examdb/examdb-home.png" />}}
 
 ### CPSC 121 Course Page
 
-{{< amp-img src="/images/examdb/examdb-course.png" />}}
+{{< img src="/images/examdb/examdb-course.png" />}}
 
 ### Unclassified Files
 
-{{< amp-img src="/images/examdb/examdb-unclassified.png" />}}
+{{< img src="/images/examdb/examdb-unclassified.png" />}}
 
 ### Upload Form
 
-{{< amp-img src="/images/examdb/examdb-upload.png" />}}g" />}}
+{{< img src="/images/examdb/examdb-upload.png" />}}

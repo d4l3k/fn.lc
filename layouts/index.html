@@ -2,8 +2,8 @@
 
 <section>
   <h2>Hi there!</h2>
-  <amp-img class="circle" height="180" layout="fixed" width="180"
-           src="{{.Site.Params.authorimage}}"></amp-img>
+  <img class="circle" height="180" width="180" alt="Tristan Rice"
+       src="{{.Site.Params.authorimage}}">
   <p>
   I'm Tristan Rice; Software Engineer and ML Infra specialist.
   </p>
@@ -47,7 +47,7 @@
   {{ end }}
 
   <a class="center" href="https://github.com/d4l3k">
-    See all {{ len .Site.Data.github }} projects on GitHub
+    See all {{ len hugo.Data.github }} projects on GitHub
   </a>
 </section>
 

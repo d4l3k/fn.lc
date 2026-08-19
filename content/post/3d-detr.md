@@ -33,10 +33,10 @@ keys for cross attention. Each one of these keys queries the model output to
 produce a set of one hot encoded class probabilities as well as the actual XY
 coordinates and height width of the detection.
 
-{{% amp-img src="/3d-detr/detr-detailed.png" %}}
+{{% img src="/3d-detr/detr-detailed.png" %}}
 The DETR architecture. The decoder uses learned object queries to directly
 generate the bounding box predictions.
-{{% /amp-img %}}
+{{% /img %}}
 
 Since the decoder is transformer based it fits well into the existing
 transformer based models I've been using. The main contribution here is the
@@ -50,11 +50,11 @@ There's a number of other detection models but they often require multiple
 stages i.e. region proposals in RCNN or post processing i.e. non maximal
 suppression (NMS).
 
-{{% amp-img src="/3d-detr/ssd.png" %}}
+{{% img src="/3d-detr/ssd.png" %}}
 [Single Shot Detector (SSD)](https://arxiv.org/pdf/1512.02325.pdf) outputs. Each
 ground truth box may have multiple overlapping predicted boxes since SSD
 predicts the offset and size for any overlapping objects.
-{{% /amp-img %}}
+{{% /img %}}
 
 These object detection models can be extended to 3D but they tend to output
 multiple possible boxes and during training optimize all nearby candidate
@@ -85,10 +85,10 @@ this I've decided to extend the existing architecture to instead generate an
 intermediate birdseye view feature map. The output is a 2D grid of features
 roughly corresponding to X/Y coordinates around the vehicle.
 
-{{% amp-img src="/3d-detr/bev-features-transformer.png" %}}
+{{% img src="/3d-detr/bev-features-transformer.png" %}}
 A generalized version of my previous VoxelNet models that outputs a birdseye
 feature map for a downstream model to consume.
-{{% /amp-img %}}
+{{% /img %}}
 
 The generic version of the VoxelNet model allows you to attach any transformer
 decoder you want. We could use this same intermediate features for doing voxel
@@ -99,10 +99,10 @@ To handle temporal features we can simply stack these per frame BEV feature maps
 and use a CNN to be able to learn changes across frames for things like dynamic
 objects.
 
-{{% amp-img src="/3d-detr/bev-temporal.png" %}}
+{{% img src="/3d-detr/bev-temporal.png" %}}
 A simple mixing CNN-based network to learn temporal changes across multiple
 frames.
-{{% /amp-img %}}
+{{% /img %}}
 
 I'm just using the current frame and 2 past frames (3 total) but it should be
 straight forward to extend it to more. The same encoder network is run on each
@@ -122,10 +122,10 @@ We can use a DETR style decoder and use it with the BEV feature map. In the
 multiheaded cross attention the Q is the DETR object queries, the K is the BEV
 positional encoding and then the V is the features.
 
-{{% amp-img src="/3d-detr/bev-detr-head.png" %}}
+{{% img src="/3d-detr/bev-detr-head.png" %}}
 The DETR BEV head. Consumes the temporal BEV map and outputs a fixed set of
 predictions including 3D position, velocity, dimensions and class.
-{{% /amp-img %}}
+{{% /img %}}
 
 The class is encoded using a one hot encoding and all of the other fields are
 using sigmoid multiplied by a fixed range to get to concrete distances, sizes
@@ -147,10 +147,10 @@ by the
 which is trained on BDD100K which I've found matches quite well with the driving
 footage from my car.
 
-{{% amp-img src="/3d-detr/bdd100koutput.png" %}}
+{{% img src="/3d-detr/bdd100koutput.png" %}}
 An example image from the main camera with predictions from a pretrained image
 space detection model.
-{{% /amp-img %}}
+{{% /img %}}
 
 My model outputs 3D bounding boxes though so I need a way to convert those into
 image space so I can use the image space loss on them. To do this I convert each
@@ -160,10 +160,10 @@ and min generally aren't differentiable but since we just care about getting the
 outline to match it's sufficient for training purposes.
 
 
-{{% amp-img src="/3d-detr/box-points.png" %}}
+{{% img src="/3d-detr/box-points.png" %}}
 Bounding boxes rendered as points with different positions and fields of view.
 Left: main. Right: fisheye.
-{{% /amp-img %}}
+{{% /img %}}
 
 Here's the code to convert outputs into image space boxes for a particular
 camera.
@@ -237,10 +237,10 @@ bounding box positions. Instead of penalizing unmatched boxes on each image, I
 instead identify boxes not matched by any camera and apply loss to the unmatched
 class.
 
-{{% amp-img src="/3d-detr/num-matched.png" %}}
+{{% img src="/3d-detr/num-matched.png" %}}
 Number of predicted vs matched boxes. I can adjust the loss weight to calibrate
 these during training.
-{{% /amp-img %}}
+{{% /img %}}
 
 One issue with the 3D to 2D conversion is that boxes behind the camera can get
 incorrectly projected into image space. I've added an extra cost for invalid
@@ -268,18 +268,18 @@ C = (
 There's two things to look at for this 1) is the image space/loss performance
 and 2) is the actual 3D representation and accuracy.
 
-{{% amp-img src="/3d-detr/imagespace-examples.png" %}}
+{{% img src="/3d-detr/imagespace-examples.png" %}}
 Example predictions from the BEV DETR model from the main camera.
-{{% /amp-img %}}
+{{% /img %}}
 
 The outputted image space predictions are quite accurate. The bounding boxes fit
 quite well and are generally no more than slightly off. Different classes of
 objects such as signs vs cars are accurately outputted.
 
-{{% amp-img src="/3d-detr/outputs.gif" %}}
+{{% img src="/3d-detr/outputs.gif" %}}
 Bounding boxes with velocity across multiple frames for the narrow forward
 camera.
-{{% /amp-img %}}
+{{% /img %}}
 
 The velocity output is far from perfect. Using only 3 frames as input and 3
 frames to train on does have it learn some of the motion of things like the
@@ -289,9 +289,9 @@ help improve the accuracy there. At 36 fps, there's only 0.0278 seconds between
 each frame which is extremely short but does let the model learn a bit.
 
 
-{{% amp-img src="/3d-detr/combined-0.png" %}}
+{{% img src="/3d-detr/combined-0.png" %}}
 The same scene rendered as 3D bounding boxes in THREE.js.
-{{% /amp-img %}}
+{{% /img %}}
 
 When we look at the model output in 3D we see that while all objects are
 detected, the predicted locations/sizes aren't all that accurate. Nearby objects
@@ -314,26 +314,26 @@ boxes across different cameras.
 * Adjust Hungarian matcher to prefer boxes matched by other cameras.
 
 
-{{% amp-img src="/3d-detr/complex-scene.png" %}}
+{{% img src="/3d-detr/complex-scene.png" %}}
 A birdseye view of a very complex scene with numerous cars, pedestrians, traffic lights and signs.
-{{% /amp-img %}}
+{{% /img %}}
 
 For very complex scenes it does a good job of recalling all objects. There's a
 handful that are missed but this may be because the model only has 100 object
 slots and this scene has 69 detections. Typically DETR models require many more
 slots than predictions.
 
-{{% amp-img src="/3d-detr/complex-vertical.png" %}}
+{{% img src="/3d-detr/complex-vertical.png" %}}
 A lateral view of the intersection.
-{{% /amp-img %}}
+{{% /img %}}
 
 The elevation of objects seems fairly accurate, the stop lights and street signs
 appear to be at a correct elevation above the vehicle. Pedestrians and cars are
 on the ground.
 
-{{% amp-img src="/3d-detr/complex-leftpillar.gif" %}}
+{{% img src="/3d-detr/complex-leftpillar.gif" %}}
 3 frames with predictions from the left pillar camera of an intersection.
-{{% /amp-img %}}
+{{% /img %}}
 
 The side cameras are a bit more noisy, partially due to the pretrained BDD100K
 model which only is trained on forward facing views but also due to the fact

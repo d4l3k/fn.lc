@@ -27,15 +27,21 @@ No theme — all templates are in `layouts/`. Styles are inlined in
   `weight` = `stars + 1` and drives the "Top Projects" ordering.
   Icons are Font Awesome 4.6 names (used as `fa fa-<icon>`).
 - `data/github.json` — snapshot of GitHub repo API objects. Refresh with
-  `util/fetch_github.go` (d4l3k's repos only) plus manual `gh api repos/...`
-  fetches for org-owned repos (pytorch/*, meta-pytorch/*) referenced by
-  project pages.
+  `make github`. It pulls d4l3k's repos and then individually fetches any
+  repo a project page references that the user repos endpoint doesn't
+  return (pytorch/*, meta-pytorch/*, nwplus/*). Set `GITHUB_TOKEN` to avoid
+  the 60 requests/hour unauthenticated limit.
 - `static/` — static assets, one directory per post that has images.
 
 ## Conventions
 
-- The site still uses AMP-era markup (`<amp-img>` shortcodes, inline CSS) —
-  match it rather than modernizing piecemeal.
+- Styles are a single inline `<style>` block in `layouts/partials/header.html`.
+  Images go through the `img` shortcode (`{{%/* img src="..." */%}}`), which
+  wraps them in `<a class="img-link">` and renders an optional caption from
+  the shortcode's inner text. `article img` deliberately bleeds wider than the
+  720px text column; `article > p > img` keeps inline markdown images inside it.
+- Embedded iframes use `class="embed"` plus an inline `aspect-ratio` so they
+  scale with the column width.
 - Raw HTML in markdown is enabled via `markup.goldmark.renderer.unsafe` in
   `config.yaml`.
 - `relativeURLs: true` so the site works both at https://fn.lc/ and under

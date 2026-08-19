@@ -31,10 +31,10 @@ To build all of this we have to start from the ground up. Here’s the raw data 
     * 1 Selfie
 
 
-{{% amp-img src="/diy-self-driving/5cam_residential.png" %}}
+{{% img src="/diy-self-driving/5cam_residential.png" %}}
 Example of 5 of the 9 cameras around the car (main, left/right pillar,
 left/right repeater)
-{{% /amp-img %}}
+{{% /img %}}
 
 
 * Vehicle Info
@@ -44,9 +44,9 @@ left/right repeater)
     * IMU Yaw, Pitch, Roll (rads/s)
 
 
-{{% amp-img src="/diy-self-driving/speed.png" %}}
+{{% img src="/diy-self-driving/speed.png" %}}
 Vehicle speed information over time
-{{% /amp-img %}}
+{{% /img %}}
 
 
 
@@ -63,9 +63,9 @@ The training data in compressed form is about 30GB of data. Unpacked and prepare
 
 This is a capture from the main camera. For training purposes I’ve scaled it to be 640x416 which allows a fair amount of detail but isn’t too large that I need a huge cluster of machines to train on.
 
-{{% amp-img src="/diy-self-driving/main.png" %}}
+{{% img src="/diy-self-driving/main.png" %}}
 A capture from the main camera in a residential area
-{{% /amp-img %}}
+{{% /img %}}
 
 
 This video feed has a lot of information about the world but to actually use it we need a training set. Classically you would have a large number of humans manually label the footage to pick out things like signs, cars, etc. Labeling video footage is super time consuming and I don’t have thousands of data labellers to help me out.
@@ -83,9 +83,9 @@ One way to understand the world is to generate a depth map from the camera foota
 
 ![alt_text](images/image4.png "image_tooltip")
 
-{{% amp-img src="/diy-self-driving/residential_depth.png" %}}
+{{% img src="/diy-self-driving/residential_depth.png" %}}
 Main camera and the predicted depth map from the monocular depth model
-{{% /amp-img %}}
+{{% /img %}}
 
 
 To train a model we typically need a dataset with input/output pairs to have the model match. In this case I _don’t_ have any labeled data much less high resolution depth maps from LIDAR. That leaves self-supervised methods to use.
@@ -103,10 +103,10 @@ Self-supervised methods use some inherent property to ensure consistency between
 I’ve shown one of Tesla’s monocular depth models before which I now believe was trained using stereoscopic images between the main and fisheye cameras. [https://twitter.com/rice_fry/status/1415034007222317057](https://twitter.com/rice_fry/status/1415034007222317057)
 
 
-{{% amp-img src="/diy-self-driving/fisheye_main_heater.png" %}}
+{{% img src="/diy-self-driving/fisheye_main_heater.png" %}}
 Main and fisheye cameras which could be used to predict depth using stereoscopic
 methods
-{{% /amp-img %}}
+{{% /img %}}
 
 
 Using the fisheye camera would explain why there’s an odd distortion in Tesla’s models where the camera heater wire is. It’s very faint on newer cars but still notable enough to affect stereoscopic models.
@@ -123,9 +123,9 @@ I picked training the model using depth from motion for these purposes since it 
 I ended up using monodepth2 ([https://github.com/nianticlabs/monodepth2](https://github.com/nianticlabs/monodepth2)) as a base since it’s quite effective out of the box. Unfortunately, most depth from motion models assume that everything is static so if you have a moving car in the shot the predicted depth will be much too close or much too far depending on whether it’s moving towards or away from the camera. Stereoscopic setups avoid this since they compare two cameras at the same time.
 
 
-{{% amp-img src="/diy-self-driving/520_depth.png" %}}
+{{% img src="/diy-self-driving/520_depth.png" %}}
 Main camera and predicted depth with a moving vehicle with incorrect depth
-{{% /amp-img %}}
+{{% /img %}}
 
 
 This shows the moving car at the wrong depth and has some issues from the edges of the camera lens. To output static terrain it’s straightforward to apply a multiple frame post-processing to ignore both of these cases.
@@ -135,9 +135,9 @@ This shows the moving car at the wrong depth and has some issues from the edges 
 
 The other issue with depth from motion is that it’s not tied to the real world. The predicted distances are all relative to each other and not tied to any one specific model.
 
-{{% amp-img src="/diy-self-driving/monodepth2_networks.png" %}}
+{{% img src="/diy-self-driving/monodepth2_networks.png" %}}
 Depth and pose networks. Credit: monodepth2 paper [https://arxiv.org/abs/1806.01260](https://arxiv.org/abs/1806.01260)
-{{% /amp-img %}}
+{{% /img %}}
 
 
 Fortunately I was able to come up with a simple fix for this. Monodepth2 uses two networks: the first generates the depth from the frame; the second calculates how the camera moves through space. Using the pose camera it can project two paired frames and ensure that the difference is equal to the motion through space.
@@ -154,15 +154,15 @@ We know the motion of the car (speed, rotations) and we can compute depth from a
 NOTE: These projections are _just_ from the main camera. Using all of the cameras would greatly improve the detail on the edges (side cameras) as well as improve the range (narrow) allowing for high res reproductions of complex intersections.
 
 
-{{% amp-img src="/diy-self-driving/520_pointcloud.png" %}}
+{{% img src="/diy-self-driving/520_pointcloud.png" %}}
 Point cloud from WA-520 — the moving car from the picture above is completely gone and the signs are readable. See more: [https://streamable.com/f5prxc](https://streamable.com/f5prxc)
-{{% /amp-img %}}
+{{% /img %}}
 
 
 
-{{% amp-img src="/diy-self-driving/residential_pointcloud.png" %}}
+{{% img src="/diy-self-driving/residential_pointcloud.png" %}}
 A residential scene with many objects. See more: [https://streamable.com/x2vce2](https://streamable.com/x2vce2)
-{{% /amp-img %}}
+{{% /img %}}
 
 These frames aren’t quite perfectly aligned since my localization is fairly rough but things are generally where they should be and the road lines line up across multiple frames. It’s pretty amazing that you can render 24 million points in a web browser.
 
@@ -177,17 +177,17 @@ Here’s that freeway scene from above:
 
 
 
-{{% amp-img src="/diy-self-driving/unlabelled_bev.png" %}}
+{{% img src="/diy-self-driving/unlabelled_bev.png" %}}
 The birdseye view of the generated point cloud showing the road surface
-{{% /amp-img %}}
+{{% /img %}}
 
 
 And here’s it quickly annotated using GIMP:
 
 
-{{% amp-img src="/diy-self-driving/labelled_bev.png" %}}
+{{% img src="/diy-self-driving/labelled_bev.png" %}}
 The birdseye view with manual annotations
-{{% /amp-img %}}
+{{% /img %}}
 
 
 Labeling video clips in 3D like this makes it much easier to label. Drawing lane lines and road edges across the whole clip with proper tools would only take seconds compared to manually annotating lane lines on hundreds or thousands of individual frames.
@@ -205,18 +205,18 @@ I didn’t really want to spend my vacation labeling data so instead of creating
 > This is inspired by how Tesla’s general static obstacle networks work that I showed at [https://twitter.com/rice_fry/status/1463628670208147460](https://twitter.com/rice_fry/status/1463628670208147460)
 
 
-{{% amp-img src="/diy-self-driving/voxel.png" %}}
+{{% img src="/diy-self-driving/voxel.png" %}}
 Rasterized voxel representation of the generated point clouds
-{{% /amp-img %}}
+{{% /img %}}
 
 
 I can take the point clouds and rasterize them into a dense 3D grid of voxels around the vehicle at each time position. For this model I generated a grid of (144, 80, 12) which equates to (48m, 26.6m, 4m). This is on the smaller size but I wanted to start small to test out and the point clouds are only generated from the main camera so the range/width isn’t that great for now.
 
 
 
-{{% amp-img src="/diy-self-driving/5cam_residential.png" %}}
+{{% img src="/diy-self-driving/5cam_residential.png" %}}
 The five cameras used as inputs to the voxel network
-{{% /amp-img %}}
+{{% /img %}}
 
 
 As the input I feed in five cameras facing around the car. This is the main, the front left and right pillar cams and the rear facing left and right repeater cameras. This gives an almost complete 360 view around the car.
@@ -224,9 +224,9 @@ As the input I feed in five cameras facing around the car. This is the main, the
 For the output, I just feed in the generated voxels from point clouds.
 
 
-{{% amp-img src="/diy-self-driving/voxel_preds.png" %}}
+{{% img src="/diy-self-driving/voxel_preds.png" %}}
 Example: Ground Truth (left); Predicted from cameras (right)
-{{% /amp-img %}}
+{{% /img %}}
 
 
 This clip is fairly hilly so the curvature of the road shows up in the voxel data. I had to model the pitch/yaw of the car in my projections as well as heading to get the data to align across multiple frames.
@@ -237,9 +237,9 @@ This model is probably overfitting to the data since I don’t have the largest 
 
 This is the network I came up with:
 
-{{% amp-img src="/diy-self-driving/VoxelNet.svg" width=1258 height=675 %}}
+{{% img src="/diy-self-driving/VoxelNet.svg" width=1258 height=675 %}}
 My DIY BEV Voxel Net Architecture
-{{% /amp-img %}}
+{{% /img %}}
 
 
 It’s loosely based off of the Tesla AI day presentation with a lot of guesswork. It seems to work reasonably well and can be trained with or without the depth encoders frozen. I use the trained depth encoder that generated the monocular depth maps.

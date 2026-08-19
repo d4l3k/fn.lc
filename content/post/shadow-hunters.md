@@ -1,7 +1,6 @@
 ---
 date: 2016-11-08T02:45:00Z
 title: "Shadow Hunters: Roll Probabilities"
-iframe: true
 ---
 
 This contains a list of all the probabilities you might be interested in when

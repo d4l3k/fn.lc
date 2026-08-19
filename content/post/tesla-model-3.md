@@ -14,9 +14,9 @@ look at how autopilot/FSD works under the hood and what it can actually do
 beyond what limited information the UI shows. I know some people have managed to
 get a copy of this.
 
-{{% amp-img src="/images/tesla-model-3/model-3-owned.jpg" %}}
+{{% img src="/images/tesla-model-3/model-3-owned.jpg" %}}
 Displaying messages on the screen using the internal API. Version 2020.12.11.1
-{{% /amp-img %}}
+{{% /img %}}
 
 ## Existing Research
 

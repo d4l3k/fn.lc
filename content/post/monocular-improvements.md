@@ -41,14 +41,14 @@ For highways especially they tend to be very uniform and the vehicles are
 moving in the same direction as the road lines so there's not much difference
 between frames.
 
-{{% amp-img src="/monocular-improvements/highway-road.png" %}}
+{{% img src="/monocular-improvements/highway-road.png" %}}
 Road surface is inaccurate due to uniformity.
-{{% /amp-img %}}
+{{% /img %}}
 
-{{% amp-img src="/diy-self-driving/520_depth.png" %}}
+{{% img src="/diy-self-driving/520_depth.png" %}}
 This speed issue is also present at the edges of the main camera in the previous
 post.
-{{% /amp-img %}}
+{{% /img %}}
 
 I was able to mitigate this issue by only training on captures below 50 mph.
 This worked to avoid that issue but skipping training data is much less than
@@ -61,10 +61,10 @@ into the depth model and applying the loss on the full 1280x960 frames instead
 of just the 640x480 frames. This helped a bit with the fine details but the
 distance accuracies weren't significantly improved.
 
-{{% amp-img src="/monocular-improvements/hrdepth-noz.png" %}}
+{{% img src="/monocular-improvements/hrdepth-noz.png" %}}
 Fine details such as the post are more accurate but speed corruption still
 occurs.
-{{% /amp-img %}}
+{{% /img %}}
 
 For the higher resolution model I based my model off of HR-Depth which seems to
 be the SoTA for monocular depth. https://arxiv.org/pdf/2012.07356.pdf
@@ -78,9 +78,9 @@ I switched to using a static mask instead of the automatic masking that was used
 in monodepth2. A static mask seems to perform better for the sides of the
 vehicle which are shiny and avoids accidentally masking out repeating patterns.
 
-{{% amp-img src="/monocular-improvements/mask.png" %}}
+{{% img src="/monocular-improvements/mask.png" %}}
 Static mask for one of the repeater cameras.
-{{% /amp-img %}}
+{{% /img %}}
 
 Moving objects such as cars can be very problematic since standard Structure
 From Motion training assumes all objects are static.
@@ -90,37 +90,37 @@ to automatically mask out all moving objects to try and get the model to not
 result in infinite/zero distances for cars. While this reduced the error it
 still didn't return accurate results.
 
-{{% amp-img src="/monocular-improvements/semantic-mask.png" %}}
+{{% img src="/monocular-improvements/semantic-mask.png" %}}
 Combination of semantic and static masks for a pillar camera.
-{{% /amp-img %}}
+{{% /img %}}
 
 ### Radar Based Masking
 
 To enable the model to learn some car distances I tried using the radar data as
 a label but since the radar data is so noisy that didn't work out well at all.
 
-{{% amp-img src="/monocular-improvements/radar2.png" %}}
+{{% img src="/monocular-improvements/radar2.png" %}}
 Overhead traffic lights causing erroneous radar returns.
-{{% /amp-img %}}
+{{% /img %}}
 
-{{% amp-img src="/monocular-improvements/radar.png" %}}
+{{% img src="/monocular-improvements/radar.png" %}}
 The heights for the radar returns are often inaccurate which makes fusing with
 image data hard.
-{{% /amp-img %}}
+{{% /img %}}
 
 
 A slightly better optimization was to use it as a filter on top of the predicted
 bounding boxes to only train the model on stopped cars.
 
-{{% amp-img src="/monocular-improvements/radar-mask.png" %}}
+{{% img src="/monocular-improvements/radar-mask.png" %}}
 Top to bottom: The raw semantic layer bounding detections, the radar filtered
 detections, and the resulting mask.
-{{% /amp-img %}}
+{{% /img %}}
 
-{{% amp-img src="/monocular-improvements/hrdepth-noz.png" %}}
+{{% img src="/monocular-improvements/hrdepth-noz.png" %}}
 Car depths are more reasonable but have some strange artifacting and aren't very
 accruate.
-{{% /amp-img %}}
+{{% /img %}}
 
 
 
@@ -130,31 +130,31 @@ To actually use the depth maps from the side cameras I needed to merge them
 together. I extended my existing 3D renderer to support rendering multiple
 cameras as well as the depth maps.
 
-{{% amp-img src="/monocular-improvements/multicam-single.jpeg" %}}
+{{% img src="/monocular-improvements/multicam-single.jpeg" %}}
 Projecting all of the cameras in one scene.
-{{% /amp-img %}}
+{{% /img %}}
 
-{{% amp-img src="/monocular-improvements/multicam-zoom.jpeg" %}}
+{{% img src="/monocular-improvements/multicam-zoom.jpeg" %}}
 Alignment is alright for mid range depths (~10-20m) when the car is driving
 straight.
-{{% /amp-img %}}
+{{% /img %}}
 
 I switched the renderer to using meshes instead of point clouds and used the
 semantic mask to mask out cars which add extra noise to the render.
 
-{{% amp-img src="/monocular-improvements/fusion-two-lane.png" %}}
+{{% img src="/monocular-improvements/fusion-two-lane.png" %}}
 A two lane road. Alignment and accuracy is quite good for this.
-{{% /amp-img %}}
+{{% /img %}}
 
-{{% amp-img src="/monocular-improvements/fusion-forward.png" %}}
+{{% img src="/monocular-improvements/fusion-forward.png" %}}
 With some fine-tuning of the render the fused output is quite good. Edges of
 objects aren't sharp resulting in jagged edges and noise.
-{{% /amp-img %}}
+{{% /img %}}
 
-{{% amp-img src="/monocular-improvements/fusion-alignment.png" %}}
+{{% img src="/monocular-improvements/fusion-alignment.png" %}}
 As the points get further from the vehicle the accuracy gets much worse. The
 edges of the images have less context so end up with inaccuracies.
-{{% /amp-img %}}
+{{% /img %}}
 
 These renders are a pretty reasonable but a bit cherrypicked since the car is
 moving in a straight line, it's well lit and I'm significantly cropping the
@@ -166,11 +166,11 @@ The noise from edges of objects was a notable issue in my initial voxel
 representation training set. Getting these renders to be robust requires good
 localization and a lot of fine tuning to make sure they work in all cases.
 
-{{% amp-img src="/monocular-improvements/colmap.jpeg" %}}
+{{% img src="/monocular-improvements/colmap.jpeg" %}}
 For reference here's the output from colmap. Generating this took two days on my 3090.
 Fine details seem to be better than my result but uses stupid amount of
 processing vs the monocular depth models which can run in real time.
-{{% /amp-img %}}
+{{% /img %}}
 
 ### Multicamera Consistency
 
@@ -183,16 +183,16 @@ another.
 This seemed like a promising approach since it would allow me to use monocular
 depth models while still getting cross camera consistency.
 
-{{% amp-img src="/monocular-improvements/projection-main-pillar.png" %}}
+{{% img src="/monocular-improvements/projection-main-pillar.png" %}}
 Projection from the main camera onto the left pillar camera.
-{{% /amp-img %}}
+{{% /img %}}
 
 These alignment and projections from one camera to another seem quite accurate
 at first glance.
 
-{{% amp-img src="/monocular-improvements/projection-repeater-backup.png" %}}
+{{% img src="/monocular-improvements/projection-repeater-backup.png" %}}
 Projection from the left repeater camera onto the backup camera.
-{{% /amp-img %}}
+{{% /img %}}
 
 If you look at the difference between the projected image and the original
 you'll notice that it never actually turns black which would indicate perfect
@@ -212,10 +212,10 @@ This required having exact camera extrinsics (position, direction) as well as
 camera intrinsics (fisheye distortion, focal lengths). I was able to calculate
 the camera distortions by using OpenCV and a printed test pattern.
 
-{{% amp-img src="/monocular-improvements/calibration-grid.png" %}}
+{{% img src="/monocular-improvements/calibration-grid.png" %}}
 Computing the distortion coefficients using a known test pattern attached to my
 cutting board.
-{{% /amp-img %}}
+{{% /img %}}
 
 
 ### Increasing Distance Between Frames
@@ -246,13 +246,13 @@ impossible (i.e. meters underground). This gave the model a prior on what was
 realistic vs not so for points on the ground that were previously infinitely far
 away it forced the model out of the bad local minimum.
 
-{{% amp-img src="/monocular-improvements/zloss.png" %}}
+{{% img src="/monocular-improvements/zloss.png" %}}
 Main camera before vs after adding a zloss. Road surface is perfect.
-{{% /amp-img %}}
+{{% /img %}}
 
-{{% amp-img src="/monocular-improvements/zloss-wet.png" %}}
+{{% img src="/monocular-improvements/zloss-wet.png" %}}
 Wet road would normally result in incorrect depths due to the reflections.
-{{% /amp-img %}}
+{{% /img %}}
 
 
 ### Conclusion

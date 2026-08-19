@@ -9,8 +9,8 @@
 
 There's a pretty awesome lightning storm going on outside.
 
-<amp-img src="/images/tumblr_nt09polb8N1r7h2fto2_1280.jpg" width="1280" height="960" layout="responsive"></amp-img>
+<img src="/images/tumblr_nt09polb8N1r7h2fto2_1280.jpg" width="1280" height="960">
 
 
-<amp-img src="/images/tumblr_nt09polb8N1r7h2fto1_1280.jpg" width="1280" height="960" layout="responsive"></amp-img>
+<img src="/images/tumblr_nt09polb8N1r7h2fto1_1280.jpg" width="1280" height="960">
 

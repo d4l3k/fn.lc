@@ -9,7 +9,7 @@ tags:
   - ubc
 ---
 
-<amp-img src="/images/career-fair-59_small.jpg" width="1024" height="681" layout="responsive"></amp-img>
+<img src="/images/career-fair-59_small.jpg" width="1024" height="681">
 
 Yesterday, I decided to take a shot at rewriting the [University of British
 Columbia's Technical Career Fair](https://ubctcf.com/) (UBC TCF) website in Hugo. The TCF
@@ -108,7 +108,7 @@ to sort by different parameters and orders.
 
 ### Grid Based Rendering
 
-<amp-img src="/images/tcf-map.png" width="996" height="692" layout="responsive"></amp-img>
+<img src="/images/tcf-map.png" width="996" height="692">
 
 Creating this grid system probably took the most amount of time. The old website had some python code ordering the booths into a two dimensional array and then sending that to the template to render. Since the new format is all done statically using Go templates, that wasn't an option. I needed some way to convert the company markdown files into the desired format.
 

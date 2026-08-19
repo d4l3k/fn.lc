@@ -31,10 +31,10 @@ LIDAR data. torchdrive only needs the raw video footage so we only consume the
 camera data and vehicle position as inputs and don't use the LIDAR or any
 labeled data.
 
-{{% amp-img src="/torchdrive/nuscenes-example.png" %}}
+{{% img src="/torchdrive/nuscenes-example.png" %}}
 Example views from CAM_FRONT_LEFT, CAM_FRONT, CAM_FRONT_RIGHT and the
 corresponding outputs from a multi task torchdrive model.
-{{% /amp-img %}}
+{{% /img %}}
 
 You can learn more about Nuscenes from the
 [official documentation](https://www.nuscenes.org/nuscenes)

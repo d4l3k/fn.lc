@@ -1,12 +1,7 @@
 <!doctype html>
-<html amp lang="en">
-  <head id>
+<html lang="en">
+  <head>
     <meta charset="utf-8">
-    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
-    {{if .Params.iframe}}
-    <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
-    {{end}}
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
     <link rel="canonical" href="{{ .Permalink }}">
               {{ with .OutputFormats.Get "RSS" }}
 		<link href="{{ .RelPermalink }}" rel="alternate"
@@ -49,8 +44,7 @@
         "url": "https://fn.lc/"
       }
     </script>
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-    <style amp-custom>
+    <style>
       body {
         font-family: 'Roboto', sans-serif;
         color: rgba(0,0,0,0.71);
@@ -93,7 +87,14 @@
         max-width: 720px;
         margin: 32px auto;
       }
-      article > table, article > amp-iframe {
+      article > table {
+        margin: 1em 0;
+      }
+      .embed {
+        display: block;
+        width: 100%;
+        height: auto;
+        border: 0;
         margin: 1em 0;
       }
       p, a.center {
@@ -104,17 +105,27 @@
         text-align: center;
         font-style: italic;
       }
-      article > p > img {
-        max-width: 100%;
-      }
-
-      article amp-img {
+      /* Block images bleed past the text column, which is what amp-img's
+         layout="responsive" used to do. Inline markdown images stay inside it. */
+      article img {
+        display: block;
+        width: calc(100% + 32px);
+        max-width: calc(100% + 32px);
+        height: auto;
         margin: 0 -16px;
       }
       @media (min-width: 940px) {
-        article amp-img {
+        article img {
+          width: calc(100% + 200px);
+          max-width: calc(100% + 200px);
           margin: 0 -100px;
         }
+      }
+      article > p > img {
+        display: inline;
+        width: auto;
+        max-width: 100%;
+        margin: 0;
       }
       body > header, body > footer {
         text-align: center;
@@ -130,13 +141,13 @@
         margin-bottom: 10px;
       }
       {{ if .IsHome }}
-      amp-img.circle {
+      img.circle {
         border-radius: 1000px;
         margin: 0 auto;
         display: block;
       }
       @media (min-width: 500px) {
-        amp-img.circle {
+        img.circle {
           float: right;
           margin: 0;
         }
@@ -294,8 +305,8 @@
       {{ block "styles" . }}
       {{ end }}
     </style>
-  </head id>
-  <body id>
+  </head>
+  <body>
     <header>
       <h1><a href="/">Tristan Rice</a></h1>
       <div>PyTorch Distributed Maintainer - ML Infra, Modeling, Security</div>

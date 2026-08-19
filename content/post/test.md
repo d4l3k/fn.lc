@@ -8,7 +8,7 @@ tags:
   - website
 ---
 
-{{< amp-img src="/apocalyptic-sf-small.jpg" />}}
+{{< img src="/apocalyptic-sf-small.jpg" />}}
 
 I've been doing a bunch of work on this site. This is a test page for all the
 different visual elements.

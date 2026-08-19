@@ -18,9 +18,9 @@ different components of the stack and what technologies were used.
 
 ## [Main Website](https://www.nwhacks.io)
 
-{{% amp-img src="/images/www.nwhacks.io.png" %}}
+{{% img src="/images/www.nwhacks.io.png" %}}
 The homepage for nwHacks. [Source Code](https://github.com/nwhacks/nwhacks2017_static)
-{{% /amp-img %}}
+{{% /img %}}
 
 The site is written in [Polymer](https://www.polymer-project.org/) and hosted on
 GitHub with CloudFlare in front of it for secure connections. This makes it
@@ -60,10 +60,10 @@ Polymer({
 
 ### Schedule
 
-{{% amp-img src="/images/nwhacks-schedule.png" %}}
+{{% img src="/images/nwhacks-schedule.png" %}}
 nwHacks 2017 Schedule.
 [Source Code](https://github.com/nwhacks/nwhacks2017_static/blob/master/components/schedule-box/schedule-box.html)
-{{% /amp-img %}}
+{{% /img %}}
 
 Similar to last year, the schedule is a reusable element that fetches directly
 from Google Calendar. This makes it very easy to add and change events. Hackers
@@ -72,9 +72,9 @@ stay on top of what's happening at the hackathon.
 
 ### Registration
 
-{{% amp-img src="/images/nwhacks-registration.png" %}}
+{{% img src="/images/nwhacks-registration.png" %}}
 The registration form. [Source Code](https://github.com/nwhacks/nwhacks2017_static/tree/master/components/register-form)
-{{% /amp-img %}}
+{{% /img %}}
 
 This year, we decided to get rid of the Django app that was previously powering
 the site. Having a static site greatly simplified deployment and a whole host of
@@ -87,10 +87,10 @@ registration object into Firebase.
 
 ### Selecting Hackers
 
-{{% amp-img src="/images/nwhacks-select.png" %}}
+{{% img src="/images/nwhacks-select.png" %}}
 The admin interface.
 [Source Code](https://github.com/nwhacks/nwhacks2017_static/tree/master/components/select-hackers)
-{{% /amp-img %}}
+{{% /img %}}
 
 Polymer and more specifically
 [polymerfire](https://www.webcomponents.org/element/firebase/polymerfire) makes
@@ -120,10 +120,10 @@ Firebase syncs the data between multiple browsers automatically.
 
 ### Statistics
 
-{{% amp-img src="/images/nwhacks-stats.png" %}}
+{{% img src="/images/nwhacks-stats.png" %}}
 Built in statistics view.
 [Source Code](https://github.com/nwhacks/nwhacks2017_static/tree/master/components/stats-page)
-{{% /amp-img %}}
+{{% /img %}}
 
 We've got an integrated stats page that lets us view statistics about the
 hackathon in realtime. It's a really satisfying feeling watching the
@@ -133,10 +133,10 @@ restrictions.
 
 ### Check-In
 
-{{% amp-img src="/images/nwhacks-checkin.png" %}}
+{{% img src="/images/nwhacks-checkin.png" %}}
 The check-in interface.
 [Source Code](https://github.com/nwhacks/nwhacks2017_static/tree/master/components/checkin-page)
-{{% /amp-img %}}
+{{% /img %}}
 
 This year I built a highly optimized page for check-in. Previously we just used
 the selection page above, but that was a lot more complicated than the current
@@ -155,9 +155,9 @@ indicating they shouldn't be allowed in.
 
 ## Email
 
-{{% amp-img src="/images/nwhacks-email.png" %}}
+{{% img src="/images/nwhacks-email.png" %}}
 The nwhacks.io Mailgun dashboard.
-{{% /amp-img %}}
+{{% /img %}}
 
 This year we used [Mailgun](https://mailgun.com) for all of our email. They have
 a Go library which made it simple to export data from Firebase and create new
@@ -204,9 +204,9 @@ year and haven't gotten around to scrubbing the Git history.
 
 ### [Slack](https://nwhacks17.slack.com)
 
-{{% amp-img src="/images/nwhacks-slack.png" %}}
+{{% img src="/images/nwhacks-slack.png" %}}
 This is what attendees saw when they joined the Slack team.
-{{% /amp-img %}}
+{{% /img %}}
 
 We setup a Slack team for all attendees and sponsors to use day of for
 communication and announcements. Super easy to setup by exporting data directly
@@ -222,25 +222,25 @@ quick to setup.
 
 ## Judging System
 
-{{% amp-img src="/images/nwhacks-voting.png" %}}
+{{% img src="/images/nwhacks-voting.png" %}}
 The pairwise project judging view.
 [Source Code](https://github.com/nwhacks/gavel)
-{{% /amp-img %}}
+{{% /img %}}
 
 For judging we used a modified version of [gavel](https://github.com/anishathalye/gavel) themed to match the rest of our site. There's also customizations to display where hackers are, and which sponsor prizes they're applying for. This also has full text search powered by lunr.js.
 
-{{% amp-img src="/images/nwhacks-voting-tables.png" %}}
+{{% img src="/images/nwhacks-voting-tables.png" %}}
 The list of all projects (with test data).
-{{% /amp-img %}}
+{{% /img %}}
 
 We setup two instances of the judging application. One for the official judges,
 and then one for a popular vote which anyone can use.
 
 ## Project Submissions
 
-{{% amp-img src="/images/nwhacks-devpost.png" %}}
+{{% img src="/images/nwhacks-devpost.png" %}}
 Our Devpost page.
-{{% /amp-img %}}
+{{% /img %}}
 
 We used [Devpost](https://nwhacks2017.devpost.com/) once again despite my
 reservations against it. I briefly considered creating my own submission tool,
@@ -250,10 +250,10 @@ the judging system. This year, we're using the CSV dumps and copy pasting it.
 
 ## [Map](https://campus.fn.lc/#LSC)
 
-{{% amp-img src="/images/campus-map.png" %}}
+{{% img src="/images/campus-map.png" %}}
 A view of LSC where nwHacks 2017 was held.
 [Source Code](https://github.com/d4l3k/campus)
-{{% /amp-img %}}
+{{% /img %}}
 
 We're using the same campus map that I wrote last year. This tiles floor plans
 on top of Google Maps and provides full text search for the places specified on

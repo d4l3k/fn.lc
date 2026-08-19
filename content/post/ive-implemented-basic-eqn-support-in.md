@@ -8,11 +8,11 @@
 }
 
 
-<amp-img src="/images/tumblr_n5jtijixpI1r7h2fto1_1280.png" width="659" height="216" layout="responsive"></amp-img>
+<img src="/images/tumblr_n5jtijixpI1r7h2fto1_1280.png" width="659" height="216">
 
 
 
-<amp-img src="/images/tumblr_n5jtijixpI1r7h2fto2_1280.png" width="664" height="208" layout="responsive"></amp-img>
+<img src="/images/tumblr_n5jtijixpI1r7h2fto2_1280.png" width="664" height="208">
 
 I’ve implemented basic `=eqn()` support in WebSync. Right now it just executes
 some javascript if the text in the cell starts with `=`. I’ve also added in one

@@ -23,9 +23,9 @@ tooling is written in. Took a few hours to write a pipeline that would read in
 the nwHacks registration data from Firebase and output it into a format that
 Hector supports.
 
-{{% amp-img src="/images/nwhacks-ml/training.png" %}}
+{{% img src="/images/nwhacks-ml/training.png" %}}
 Training the model and evaluating my personal results.
-{{% /amp-img %}}
+{{% /img %}}
 
 
 ## Features

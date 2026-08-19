@@ -7,7 +7,7 @@
 }
 
 
-<amp-img src="/images/tumblr_n4ze8jJIlB1r7h2fto1_1280.png" height="720" width="1280" layout="responsive"></amp-img>
+<img src="/images/tumblr_n4ze8jJIlB1r7h2fto1_1280.png" height="720" width="1280">
 
 I just added easy custom CSS on WebSync documents. It might not be for the best&hellip; However, it works quite well and like everything you can edit the css in one window and preview the changes on the other. :D
 

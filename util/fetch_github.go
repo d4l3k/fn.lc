@@ -3,6 +3,8 @@ package main
 import (
 	"bytes"
 	"encoding/json"
+	"fmt"
+	"io"
 	"log"
 	"net/http"
 	"os"
@@ -15,54 +17,64 @@ import (
 	"github.com/tomnomnom/linkheader"
 )
 
-const baseURL = "https://api.github.com/users/d4l3k/repos?type=all"
+const userReposURL = "https://api.github.com/users/d4l3k/repos?type=all&per_page=100"
+
+type project struct {
+	path  string
+	front map[string]interface{}
+	body  string
+}
+
+// get fetches url as JSON into out and returns the response headers. Set
+// GITHUB_TOKEN to raise the 60 requests/hour unauthenticated rate limit.
+func get(url string, out interface{}) (http.Header, error) {
+	req, err := http.NewRequest(http.MethodGet, url, nil)
+	if err != nil {
+		return nil, err
+	}
+	req.Header.Set("Accept", "application/vnd.github+json")
+	if token := os.Getenv("GITHUB_TOKEN"); token != "" {
+		req.Header.Set("Authorization", "Bearer "+token)
+	}
+	resp, err := http.DefaultClient.Do(req)
+	if err != nil {
+		return nil, err
+	}
+	defer resp.Body.Close()
+	if resp.StatusCode != http.StatusOK {
+		body, _ := io.ReadAll(io.LimitReader(resp.Body, 512))
+		return nil, fmt.Errorf("GET %s: %s: %s", url, resp.Status, body)
+	}
+	if err := json.NewDecoder(resp.Body).Decode(out); err != nil {
+		return nil, err
+	}
+	return resp.Header, nil
+}
 
 func main() {
-	token := os.Getenv("GITHUB_TOKEN")
-
 	log.SetFlags(log.Flags() | log.Lshortfile)
+	log.SetOutput(os.Stderr)
 
 	final := map[string]map[string]interface{}{}
 
-	log.SetOutput(os.Stderr)
-	nextURL := baseURL
-outer:
-	for {
-		if len(token) > 0 {
-			nextURL += "&access_token=" + token
-		}
+	for nextURL := userReposURL; nextURL != ""; {
 		log.Printf("Fetching: %s", nextURL)
-		req, err := http.Get(nextURL)
-		if err != nil {
-			log.Fatal(err)
-		}
 		var repos []map[string]interface{}
-
-		err = json.NewDecoder(req.Body).Decode(&repos)
-		req.Body.Close()
+		header, err := get(nextURL, &repos)
 		if err != nil {
 			log.Fatal(err)
 		}
-
 		for _, r := range repos {
-			fullName := strings.ToLower(r["full_name"].(string))
-			final[fullName] = r
+			final[strings.ToLower(r["full_name"].(string))] = r
 		}
 
-		links := linkheader.Parse(req.Header.Get("Link"))
-		for _, link := range links {
+		nextURL = ""
+		for _, link := range linkheader.Parse(header.Get("Link")) {
 			if link.Rel == "next" {
 				nextURL = link.URL
-				continue outer
+				break
 			}
 		}
-		break
-	}
-
-	enc := json.NewEncoder(os.Stdout)
-	enc.SetIndent("", "  ")
-	if err := enc.Encode(final); err != nil {
-		log.Fatal(err)
 	}
 
 	files, err := filepath.Glob("content/project/*.md")
@@ -71,45 +83,72 @@ outer:
 	}
 	m := front.NewMatter()
 	m.Handle("---", front.YAMLHandler)
+
+	var projects []project
 	for _, f := range files {
 		fo, err := os.Open(f)
 		if err != nil {
 			log.Fatal(err)
 		}
-		front, body, err := m.Parse(fo)
+		matter, body, err := m.Parse(fo)
+		fo.Close()
 		if err != nil {
+			log.Fatalf("%s: %v", f, err)
+		}
+		projects = append(projects, project{path: f, front: matter, body: body})
+	}
+
+	// Org owned repos (pytorch/*, meta-pytorch/*, nwplus/*, ...) aren't all
+	// returned by the user repos endpoint. Without this they'd be dropped from
+	// github.json and their project pages would lose their description.
+	for _, p := range projects {
+		name, ok := p.front["github"].(string)
+		if !ok {
+			continue
+		}
+		key := strings.ToLower(name)
+		if _, ok := final[key]; ok {
+			continue
+		}
+		url := "https://api.github.com/repos/" + name
+		log.Printf("Fetching: %s", url)
+		var repo map[string]interface{}
+		if _, err := get(url, &repo); err != nil {
 			log.Fatal(err)
 		}
-		fo.Close()
-		github, ok := front["github"]
-		if ok {
-			details, ok := final[github.(string)]
+		final[key] = repo
+	}
+
+	enc := json.NewEncoder(os.Stdout)
+	enc.SetIndent("", "  ")
+	if err := enc.Encode(final); err != nil {
+		log.Fatal(err)
+	}
+
+	for _, p := range projects {
+		if name, ok := p.front["github"].(string); ok {
+			details, ok := final[strings.ToLower(name)]
 			if !ok {
-				log.Printf("can't find github repo %q", github)
+				log.Printf("can't find github repo %q", name)
 				continue
 			}
-			front["date"] = details["pushed_at"].(string)
-			front["stars"] = details["stargazers_count"].(float64)
-			front["weight"] = details["stargazers_count"].(float64) + 1
+			p.front["date"] = details["pushed_at"].(string)
+			p.front["stars"] = details["stargazers_count"].(float64)
+			p.front["weight"] = details["stargazers_count"].(float64) + 1
 		}
+
 		var buf bytes.Buffer
 		buf.WriteString("---\n")
-		yamlBytes, err := yaml.Marshal(front)
+		yamlBytes, err := yaml.Marshal(p.front)
 		if err != nil {
 			log.Fatal(err)
 		}
 		buf.Write(yamlBytes)
 		buf.WriteString("---\n")
-		buf.WriteString(body)
+		buf.WriteString(p.body)
 
-		fo, err = os.OpenFile(f, os.O_WRONLY, 0755)
-		if err != nil {
+		if err := os.WriteFile(p.path, buf.Bytes(), 0644); err != nil {
 			log.Fatal(err)
 		}
-		if _, err := buf.WriteTo(fo); err != nil {
-			log.Fatal(err)
-		}
-
-		fo.Close()
 	}
 }

@@ -10,16 +10,17 @@
   {{ $width = $config.Width }}
 {{end}}
 
-<a href="{{ $src }}">
-<amp-img src="{{$src}}"
-           height="{{$height}}"
-           width="{{$width}}"
-           layout="responsive">
-</amp-img>
+<a class="img-link" href="{{ $src }}">
+<img src="{{$src}}"
+     height="{{$height}}"
+     width="{{$width}}"
+     alt="{{ .Get `alt` }}"
+     loading="lazy"
+     decoding="async">
 </a>
 
 {{ if .Inner }}
 <div class="caption">
-  <p>{{ .Inner }}</p>
+  {{ .Inner }}
 </div>
 {{ end }}

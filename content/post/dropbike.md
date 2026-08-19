@@ -28,9 +28,9 @@ campus.
 
 <!--more-->
 
-{{% amp-img src="/images/dropbike/dropbike.jpg" %}}
+{{% img src="/images/dropbike/dropbike.jpg" %}}
 A Dropbike in its natural habitat.
-{{% /amp-img %}}
+{{% /img %}}
 
 Unfortunately, the
 [app](https://play.google.com/store/apps/details?id=ca.dropbike) is pretty
@@ -40,9 +40,9 @@ finding and unlocking the bike part works for the most part, but once you unlock
 a bike the app goes completely unresponsive, eats a huge amount of battery and
 constantly polls and sends your location to the server.
 
-{{% amp-img src="/images/dropbike/playstore.png" %}}
+{{% img src="/images/dropbike/playstore.png" %}}
 The first warning sign. [Google Play Store](https://play.google.com/store/apps/details?id=ca.dropbike)
-{{% /amp-img %}}
+{{% /img %}}
 
 I'd like to give them the benefit of the doubt as a small young company, but
 it's hard to say they're unaware of the issues when their play store rating is a
@@ -154,9 +154,9 @@ reimplemented API library can be found
 
 ## First Issue: Free Bike Rides
 
-{{% amp-img src="/images/dropbike/opendropbike.png" %}}
+{{% img src="/images/dropbike/opendropbike.png" %}}
 opendropbike in action.
-{{% /amp-img %}}
+{{% /img %}}
 
 Time to see if this app actually works! I walked outside to the bike I had
 stashed outside my door, pulled out my app and scanned the QR code on the bike
@@ -200,9 +200,9 @@ $ curl -H 'x-dropbike-session-id: <omitted>' https://dropbike.herokuapp.com/v3/c
 
 **You can unlock every single Dropbike remotely for free.**
 
-{{% amp-img src="/images/dropbike/oops.gif" %}}
+{{% img src="/images/dropbike/oops.gif" %}}
 Oops.
-{{% /amp-img %}}
+{{% /img %}}
 
 I figure the only responsible thing to do is to reach out to Dropbike to see if
 there's a bug bounty program and report the issue.
@@ -256,9 +256,9 @@ $ curl -H 'Authorization: Bearer dG9rOjZhNzk0NWI0X2JkNjZfNDVlMl9iNzMwX2VlOTEyMTM
 }
 ```
 
-{{% amp-img src="/images/dropbike/supposed.gif" %}}
+{{% img src="/images/dropbike/supposed.gif" %}}
 Uh...
-{{% /amp-img %}}
+{{% /img %}}
 
 Twenty thousand users seems like a lot. This is quite possibly every single one
 of their users contact details.
@@ -483,8 +483,8 @@ since the law doesn't come into effect until November 1st, 2018.
 
 ## See Also: Dropbike Visualizer
 
-{{% amp-img src="/images/dropbike/visualizer.png" %}}
+{{% img src="/images/dropbike/visualizer.png" %}}
 [My UBC Dropbike Trip Visualizer](https://d4l3k.github.io/dropbike-visualizer/)
-{{% /amp-img %}}
+{{% /img %}}
 
 

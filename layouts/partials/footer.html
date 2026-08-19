@@ -5,26 +5,8 @@
   </p>
   <p> <a href="https://github.com/d4l3k/fn.lc">Source Code</a> </p>
 </footer>
-<amp-analytics type="googleanalytics" id="analytics1">
-  <script type="application/json">
-{
-  "vars": {
-    "account": "UA-52169625-1"
-  },
-  "triggers": {
-    "trackPageviewWithCustomUrl": {
-      "on": "visible",
-      "request": "pageview",
-      "vars": {
-        "documentLocation": "{{ .Permalink }}"
-      }
-    }
-  }
-}
-  </script>
-</amp-analytics>
 {{ if or .IsHome (eq .Section "project") }}
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 {{ end }}
-</body id>
-</html id>
+</body>
+</html>

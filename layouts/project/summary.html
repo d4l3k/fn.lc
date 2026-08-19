@@ -1,5 +1,5 @@
 <article class="post icon">
-  {{ $github := index .Site.Data.github (lower .Params.github) }}
+  {{ $github := index hugo.Data.github (lower .Params.github) }}
   {{ $url := .RelPermalink }}
   {{ with $github }}{{ $url = .html_url }}{{ end }}
 

@@ -21,9 +21,9 @@ puddles, blurry road surfaces and water on the camera.
 
 ### Problems with Image Space Depth
 
-{{% amp-img src="/monocular-improvements/zloss-wet.png" %}}
+{{% img src="/monocular-improvements/zloss-wet.png" %}}
 Example of the output from a monocular depth model.
-{{% /amp-img %}}
+{{% /img %}}
 
 The main issue for the monocular depth models is that taking the video from multiple
 cameras and merging the point clouds is hard. It's a very expensive operation
@@ -48,9 +48,9 @@ the 2D fusion. Luckily we already have a 3D representation--the voxel based
 occupancy grids we're trying to train. We also have a model architecture that
 works to convert the 2D camera feeds into that 3D representation.
 
-{{% amp-img src="/voxel-sfm/twolane-voxel.png" %}}
+{{% img src="/voxel-sfm/twolane-voxel.png" %}}
 Voxel representation of the world and the correspond main camera view.
-{{% /amp-img %}}
+{{% /img %}}
 
 In my first post I used the output from the 2D depth model to create the
 training data for the 3D model. Can we cut out that transformation step and
@@ -68,10 +68,10 @@ If you're interested to learn more, [PyTorch3D](https://pytorch3d.org/) is a
 great library for doing things like this and my custom renderer was heavily
 inspired by it.
 
-{{% amp-img src="/voxel-sfm/raymarching.png" %}}
+{{% img src="/voxel-sfm/raymarching.png" %}}
 From "Rendering Volumes and Implicit Shapes in PyTorch3D"
 https://www.youtube.com/watch?v=g50RiDnfIfY&t=501s
-{{% /amp-img %}}
+{{% /img %}}
 
 We're focusing on Raymarching since it's a technique to render 3D voxel
 representations. Most differentiable rendering is focused on reproducing a visual model of the
@@ -151,11 +151,11 @@ scaling needed.
 
 With this we can render a 2D depth map from the 3D representation directly.
 
-{{% amp-img src="/voxel-sfm/rightpillar.png" %}}
+{{% img src="/voxel-sfm/rightpillar.png" %}}
 A picture from the right pillar camera and the 2D depth map rendered from the
 occupancy grid. The bottom is striped since we clamp the distance for points
 underground.
-{{% /amp-img %}}
+{{% /img %}}
 
 ### Training
 
@@ -171,10 +171,10 @@ of the vehicle but applied the same distance loss to keep is scaled to real life
 as in my first post, given the geometric constraints I'm not sure it's strictly
 necessary but helps during early stages of training.
 
-{{% amp-img src="/voxel-sfm/gridz.png" %}}
+{{% img src="/voxel-sfm/gridz.png" %}}
 The occupancy grid probabilities from the top down and the positions of the
 vehicle during training. Vehicle moves from the top down.
-{{% /amp-img %}}
+{{% /img %}}
 
 I compute the loss for each camera at 2 different vehicle locations. The first
 location is always the same as the data fed into the model and the second is
@@ -200,9 +200,9 @@ and pillar cameras.
 I also tried to learn the colors and occupancy directly so I didn't have to use
 the SfM disparity loss but that didn't work as well.
 
-{{% amp-img src="/voxel-sfm/colorrender.png" %}}
+{{% img src="/voxel-sfm/colorrender.png" %}}
 The target, the rendered model output and the occupancy grid.
-{{% /amp-img %}}
+{{% /img %}}
 
 The model ended up cheating and created a colored bubble instead of actually
 learning the correct occupancy. This was only trained from a single position
@@ -223,9 +223,9 @@ value dimension and a standard convolution upsampling afterwards to reach the
 target size of 256x256 which is ~6x bigger output than my original model in a
 similar amount of memory.
 
-{{% amp-img src="/voxel-sfm/voxelnet_v2.png" %}}
+{{% img src="/voxel-sfm/voxelnet_v2.png" %}}
 The VoxelNet v2 model.
-{{% /amp-img %}}
+{{% /img %}}
 
 In hindsight my original model was doing feature fusion way too early. I was
 concatenating the per camera inputs and running a joint BiFPN trunk on the
@@ -244,9 +244,9 @@ I'm quite happy with the results. The fused output is much nicer than my
 previous attempts to fuse the point clouds. It's outputting much further away
 and the output is much more useful.
 
-{{% amp-img src="/voxel-sfm/voxel-highway-cars.png" %}}
+{{% img src="/voxel-sfm/voxel-highway-cars.png" %}}
 A voxel representation of a highway.
-{{% /amp-img %}}
+{{% /img %}}
 
 There is some artifacting around the vehicle due to the fixed camera positions
 but overall it's quite good. The barrier/hill on the right is present all the
@@ -257,19 +257,19 @@ Notably all of the dynamic objects/vehicles are gone from the output. Since this
 is trained from multiple different positions and the cars move they're entirely
 omitted from the output unless it's very clear that they're parked.
 
-{{% amp-img src="/voxel-sfm/voxel-building-corner.png" %}}
+{{% img src="/voxel-sfm/voxel-building-corner.png" %}}
 Approaching an intersection with a building blocking the view to the right.
-{{% /amp-img %}}
+{{% /img %}}
 
 This is the vehicle approaching an intersection. The model correctly understands
 that there's open space past the building despite not seeing it and the road
 slants up to the right. It also captures the nearby plants though with low
 probability since they're very close to the z cutoff point.
 
-{{% amp-img src="/voxel-sfm/voxel-bridge.png" %}}
+{{% img src="/voxel-sfm/voxel-bridge.png" %}}
 Going over a short bridge with trees nearby. 90% confidence top, 50% confidence
 bottom
-{{% /amp-img %}}
+{{% /img %}}
 
 The bridge railing is accurately captured with a gap behind it. Confidence is
 high for much of the solid objects as the 90% confidence threshold captures most
@@ -280,18 +280,18 @@ Tesla's voxel output only outputs the shells of the object around them which in
 contrast to these results seems to imply that Tesla is training their voxel
 models in a supervised manner from point cloud representations.
 
-{{% amp-img src="/voxel-sfm/voxel-obstructed.png" %}}
+{{% img src="/voxel-sfm/voxel-obstructed.png" %}}
 Water on right pillar camera obstructing the lens.
-{{% /amp-img %}}
+{{% /img %}}
 
 With a partially obstructed camera we still get fairly reasonable results. The
 main camera can see the building ahead and the part of the building that is
 visible is present. There is some output gap where the camera is obstructed and
 no other cameras can see that area.
 
-{{% amp-img src="/voxel-sfm/voxel-narrow.png" %}}
+{{% img src="/voxel-sfm/voxel-narrow.png" %}}
 Driving between two buildings close together.
-{{% /amp-img %}}
+{{% /img %}}
 
 The building is shown correctly off axis and is consistent between camera
 transitions. The small pillars and posts aren't captured by the model possibly due

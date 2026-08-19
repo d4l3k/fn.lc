@@ -1,5 +1,5 @@
 {
-    "slug": "new-site",
+    "slug": "new-site-polymer",
     "date": "2015-08-13T05:23:37.000Z",
     "tags": [],
     "title": "New Site",

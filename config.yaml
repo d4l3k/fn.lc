@@ -1,11 +1,10 @@
 baseurl: "https://fn.lc/"
 title: "Tristan Rice"
-languageCode: "en-us"
+locale: "en-us"
 params:
   authorimage: "https://avatars1.githubusercontent.com/u/909104?v=3&s=360"
 relativeURLs: true
 
-MetaDataFormat: "yaml"
 markup:
   goldmark:
     renderer:
@@ -14,3 +13,11 @@ markup:
     codeFences: true
     noClasses: false
     lineAnchors: line
+
+# Hugo blocks text/html content files by default, but content/chart/*.html are
+# hand-written Chart.js pages loaded in an iframe. Setting this replaces the
+# default whitelist rather than extending it, so markdown has to be listed too.
+security:
+  allowContent:
+    - "^text/markdown$"
+    - "^text/html$"

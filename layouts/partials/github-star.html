@@ -1,4 +1,4 @@
-{{ $github := index .Site.Data.github (lower .Params.github) }}
+{{ $github := index hugo.Data.github (lower .Params.github) }}
 
 {{ if $github }}
   <span class="github-star"><a class="github-button" href="{{ $github.html_url }}"
