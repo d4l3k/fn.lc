@@ -2,7 +2,8 @@
 date: '2023-02-21T05:42:01Z'
 github: d4l3k/go-pry
 icon: terminal
-stars: 3005
+pinned: 5
+stars: 3004
 title: go-pry
-weight: 3006
+weight: 3005
 ---

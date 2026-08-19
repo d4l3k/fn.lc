@@ -29,27 +29,12 @@
   </blockquote>
 </section>
 
-<section id="main">
-  <h2>Recent Posts</h2>
-
-  {{ range (where .Data.Pages "Section" "post") }}
-    <div>
-      {{ range first 3 .Pages.ByDate.Reverse}}
-        {{ .Render "summary" }}
-      {{ end }}
-    </div>
-
-    <a class="center" href="/post/">View all {{ len .Pages }} posts</a>
-  {{ end }}
-</section>
-
-
 <section>
   <h2>Top Projects</h2>
 
   {{ range (where .Pages "Section" "project")}}
     <div class="projects-grid">
-      {{ range first 6 .Pages.ByWeight.Reverse}}
+      {{ range sort (where .Pages "Params.pinned" "!=" nil) "Params.pinned" }}
         {{ .Render "summary"}}
       {{ end }}
     </div>
@@ -64,6 +49,20 @@
   <a class="center" href="https://github.com/d4l3k">
     See all {{ len .Site.Data.github }} projects on GitHub
   </a>
+</section>
+
+<section id="main">
+  <h2>Recent Posts</h2>
+
+  {{ range (where .Data.Pages "Section" "post") }}
+    <div>
+      {{ range first 15 .Pages.ByDate.Reverse}}
+        {{ .Render "summary" }}
+      {{ end }}
+    </div>
+
+    <a class="center" href="/post/">View all {{ len .Pages }} posts</a>
+  {{ end }}
 </section>
 
 {{ partial "footer.html" . }}

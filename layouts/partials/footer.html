@@ -23,5 +23,8 @@
 }
   </script>
 </amp-analytics>
+{{ if or .IsHome (eq .Section "project") }}
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+{{ end }}
 </body id>
 </html id>

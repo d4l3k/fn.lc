@@ -1,0 +1,8 @@
+{{ $github := index .Site.Data.github (lower .Params.github) }}
+
+{{ if $github }}
+  <span class="github-star"><a class="github-button" href="{{ $github.html_url }}"
+     data-color-scheme="no-preference: light; light: light; dark: light;"
+     data-size="large" data-show-count="true"
+     aria-label="Star {{ $github.full_name }} on GitHub">Star</a></span>
+{{ end }}

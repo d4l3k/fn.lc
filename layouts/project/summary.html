@@ -1,5 +1,7 @@
 <article class="post icon">
   {{ $github := index .Site.Data.github (lower .Params.github) }}
+  {{ $url := .RelPermalink }}
+  {{ with $github }}{{ $url = .html_url }}{{ end }}
 
   {{ if .Params.icon }}
     <i class="fa fa-{{.Params.icon}} summary-icon" aria-hidden="true"></i>
@@ -8,14 +10,13 @@
   <div class="post-container">
     <header>
       <h3>
-        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        <a href="{{ $url }}">{{ .Title }}</a>
+        {{ partial "github-star.html" . }}
         {{ if .Draft }}
         <span class="draft">DRAFT</span>
         {{end}}
       </h3>
-      <div class="post-meta">
-        {{ partial "github.html" . }}
-      </div>
+      {{ partial "github.html" . }}
     </header>
 
     <p>
