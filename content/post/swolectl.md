@@ -17,12 +17,6 @@ on this.
 
 The code is at [github.com/d4l3k/swolectl](https://github.com/d4l3k/swolectl).
 
-## Photos
-
-![swolectl UI](/swolectl/ui.png)
-
-![Full swolectl setup](/swolectl/setup.png)
-
 ## Architecture
 
 Tonal is effectively two main pieces: an Android 6.0 system and app running on
@@ -58,24 +52,6 @@ them. I've only tested features that are exposed by the Tonal interface.
 | 6 | Perturbation |
 | 7 | Reverse chains |
 | 8 | Eccentric reduction |
-
-## Connecting to the Motor Controller
-
-To open the Tonal unit, there are four security hex screws on the right side of
-the unit hidden by the arm. Rotating it to the forward position with the arm
-extended is the easiest way to access them.
-
-It is strongly recommended to power off your unit before doing anything to it.
-
-The Android computer on the back of the screen has a white five-pin connector
-labeled `tablet` on the bottom right. This connector exposes USB as well as a
-wake signal to the Android computer. You can disconnect that connector and use
-a USB connector instead. It's also recommended to unplug the `tablet power`
-connector.
-
-![The tablet connector](/swolectl/tablet-connector.png)
-
-![The Tonal Android connectors](/swolectl/tonal-connectors.png)
 
 ## Why?
 
